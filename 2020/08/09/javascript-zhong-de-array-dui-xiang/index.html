@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="回文对, coding">
+    <meta name="keywords" content="JavaScript中的数组, coding">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>回文对 | coding</title>
+    <title>JavaScript中的数组 | coding</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">回文对</h1>
+                    <h1 class="description center-align post-title">JavaScript中的数组</h1>
                 </div>
             </div>
         </div>
@@ -430,8 +430,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
                     </div>
@@ -442,8 +442,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" class="post-category">
-                                力扣每日一题
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                             </a>
                         
                     </div>
@@ -455,7 +455,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-08-06
+                    2020-08-09
                 </div>
                 
 
@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    189
+                    692
                 </div>
                 
 
@@ -481,16 +481,60 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一组 <strong>互不相同</strong> 的单词， 找出所有<strong>不同</strong> 的索引对<code>(i, j)</code>，使得列表中的两个单词， <code>words[i] + words[j]</code> ，可拼接成回文串。</p>
-<p><strong>示例 1：</strong></p>
-<pre><code>输入：[&quot;abcd&quot;,&quot;dcba&quot;,&quot;lls&quot;,&quot;s&quot;,&quot;sssll&quot;]
-输出：[[0,1],[1,0],[3,2],[2,4]] 
-解释：可拼接成的回文串为 [&quot;dcbaabcd&quot;,&quot;abcddcba&quot;,&quot;slls&quot;,&quot;llssssll&quot;]</code></pre>
-<p><strong>示例 2：</strong></p>
-<pre><code>输入：[&quot;bat&quot;,&quot;tab&quot;,&quot;cat&quot;]
-输出：[[0,1],[1,0]] 
-解释：可拼接成的回文串为 [&quot;battab&quot;,&quot;tabbat&quot;]</code></pre>
-<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><h2 id="暴力验证法（python字典）："><a href="#暴力验证法（python字典）：" class="headerlink" title="暴力验证法（python字典）："></a>暴力验证法（python字典）：</h2><p>在字典数存储所有的字符串，再将待查询的字符串逆序在字典树中进行遍历，判断其是否存在。</p>
+                <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>数组是一种特殊的变量，可以在单个变量中存储多个值，并且可以通过索引快速访问这些值</p>
+<h2 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h2><pre><code class="javascript">var arrayName = [a1,a2...]; //数组定义语法
+var animals = [&quot;lion&quot;,&quot;tiger&quot;]; //数组定义实例</code></pre>
+<p>上面数组定义实例中，定义名为animals的数组，并为其赋值。</p>
+<h5 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h5><p>数组定义时，多个元素之间用逗号“,”隔开；</p>
+<p>最后一个元素后请不要使用“,”；</p>
+<h2 id="访问数组元素"><a href="#访问数组元素" class="headerlink" title="访问数组元素"></a>访问数组元素</h2><p>通过引用索引号来引用数组的某个元素值</p>
+<pre><code class="javascript">var name = animals[0] ; //访问数组的第一个元素
+document.getElementByld(&quot;demo&quot;).innerHTML = animals ; //引用数组名访问整个数组</code></pre>
+<p>该实例可以给“name”变量赋值，值为数组animals的第一个元素。</p>
+<h5 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h5><p>数组元素是从0开始索引，[0]为数组的第一个元素。</p>
+<h2 id="修改数组元素"><a href="#修改数组元素" class="headerlink" title="修改数组元素"></a>修改数组元素</h2><pre><code class="javascript">animals[0] = &quot;elephants&quot; ;//修改数组animals中首个元素</code></pre>
+<h2 id="数组与对象"><a href="#数组与对象" class="headerlink" title="数组与对象"></a>数组与对象</h2><p>数组是一种特殊类型的对象。在数组中使用数字来访问其元素，对象中使用名称来访问其“成员”。</p>
+<pre><code class="javascript">//数组
+var animals = [&quot;lion&quot;,&quot;tiger&quot;];
+var name = animals[0]; //返回数组元素“lion”
+
+//对象
+var archives = &amp;#123;Name:&quot;John&quot;, career:&quot;worker&quot;, age:46&amp;#125;;
+archives.Name; //返回对象成员Name的值“John”</code></pre>
+<h5 id="注意：-2"><a href="#注意：-2" class="headerlink" title="注意："></a>注意：</h5><p>数组元素可以是对象、函数，甚至数组。</p>
+<p>在 JavaScript 中，<strong>数组</strong>使用<strong>数字索引</strong>。</p>
+<p>在 JavaScript 中，<strong>对象</strong>使用<strong>命名索引</strong>。</p>
+<p><strong>数组是特殊类型的对象，具有数字索引。</strong></p>
+<h2 id="数组属性与方法"><a href="#数组属性与方法" class="headerlink" title="数组属性与方法"></a>数组属性与方法</h2><h4 id="length属性"><a href="#length属性" class="headerlink" title="length属性"></a>length属性</h4><p>length属性返回数组的长度（元素个数）。</p>
+<pre><code class="javascript">var animals = [&quot;lion&quot;,&quot;tiger&quot;];
+animals.length; //返回数组长度2</code></pre>
+<h4 id="访问数组最后一个元素"><a href="#访问数组最后一个元素" class="headerlink" title="访问数组最后一个元素"></a>访问数组最后一个元素</h4><p>数组元素值得访问通过引用其索引达成，所以访问最后一个元素可以通过数组length属性完成。</p>
+<pre><code class="javascript">var last = animals[animals.length-1]; //返回数组最后一个元素“tiger”</code></pre>
+<h4 id="遍历数组元素"><a href="#遍历数组元素" class="headerlink" title="遍历数组元素"></a>遍历数组元素</h4><p>遍历数组元素通过for循环，结合数组length属性达成。</p>
+<pre><code class="javascript">var animals, text, fLen, i;
+
+var animals = [&quot;lion&quot;,&quot;tiger&quot;];
+fLen = fruits.length; //数组长度
+text = &quot;&lt;ul&gt;&quot;;
+for (i = 0; i &lt; fLen; i++) &amp;#123;
+     text += &quot;&lt;li&gt;&quot; + fruits[i] + &quot;&lt;/li&gt;&quot;;
+&amp;#125; </code></pre>
+<p><strong>注</strong>：也可以使用Array.foreach()函数，但是最安全的方法是使用for循环。</p>
+<pre><code class="javascript">var animals, text;
+var animals = [&quot;lion&quot;,&quot;tiger&quot;];
+
+text = &quot;&lt;ul&gt;&quot;;
+animals.forEach(myFunction);
+text += &quot;&lt;/ul&gt;&quot;;
+
+function myFunction(value) &amp;#123;
+  text += &quot;&lt;li&gt;&quot; + value + &quot;&lt;/li&gt;&quot;;
+&amp;#125;</code></pre>
+<h4 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h4><p>使用push方法：</p>
+<pre><code class="javascript">var animals = [&quot;lion&quot;,&quot;tiger&quot;];
+animals.push(&quot;elephants&quot;); //为数组添加新元素“elephants”</code></pre>
+<p><strong>注：</strong>可以使用length属性添加新元素：</p>
+<pre><code class="javascript">animals[animals.length] = &quot;elephants&quot; ;</code></pre>
 
             </div>
             <hr/>
@@ -516,7 +560,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/08/06/hui-wen-dui/">http://yoursite.com/2020/08/06/hui-wen-dui/</a>
+                    <a href="http://yoursite.com/2020/08/09/javascript-zhong-de-array-dui-xiang/">http://yoursite.com/2020/08/09/javascript-zhong-de-array-dui-xiang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -554,8 +598,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
                         </div>
@@ -727,46 +771,32 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/08/09/javascript-zhong-de-array-dui-xiang/">
+                <a href="/2020/08/15/mac-xia-wang-ji-mysql-de-root-mi-ma-jie-jue-fang-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="JavaScript中的数组">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="mac下忘记mysql的root密码解决方法">
                         
-                        <span class="card-title">JavaScript中的数组</span>
+                        <span class="card-title">mac下忘记mysql的root密码解决方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数组数组是一种特殊的变量，可以在单个变量中存储多个值，并且可以通过索引快速访问这些值
-定义方法var arrayName = [a1,a2...]; //数组定义语法
-var animals = [&quot;lion&quot;,&quo
+                            
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-09
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-15
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Mc1995
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -778,26 +808,21 @@ var animals = [&quot;lion&quot;,&quo
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/06/js-zhong-bian-liang-de-zuo-yong-yu/">
+                <a href="/2020/08/06/hui-wen-dui/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Js中变量的作用域">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="回文对">
                         
-                        <span class="card-title">Js中变量的作用域</span>
+                        <span class="card-title">回文对</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1:Js变量作用域求以下代码的输出结果
-var num1 = 50;
-var num2 = 60;
-
-function f1(num,num1) &amp;#123;
-    num = 100;
-    num1 = 100;
-    n
+                            题目描述给定一组 互不相同 的单词， 找出所有不同 的索引对(i, j)，使得列表中的两个单词， words[i] + words[j] ，可拼接成回文串。
+示例 1：
+输入：[&quot;abcd&quot;,&quot;dcba&quo
                         
                     </div>
                     <div class="publish-info">
@@ -808,8 +833,8 @@ function f1(num,num1) &amp;#123;
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" class="post-category">
+                                    力扣每日一题
                                 </a>
                             
                             
@@ -819,8 +844,8 @@ function f1(num,num1) &amp;#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Javascript/">
-                        <span class="chip bg-color">Javascript</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
