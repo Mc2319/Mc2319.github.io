@@ -4,13 +4,50 @@
   
     
     <entry>
+      <title>SQL执行顺序</title>
+      <link href="/2020/08/17/sql-zhi-xing-shun-xu/"/>
+      <url>/2020/08/17/sql-zhi-xing-shun-xu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="SQL执行顺序"><a href="#SQL执行顺序" class="headerlink" title="SQL执行顺序"></a>SQL执行顺序</h2><p>数据库作为作为数据分析的重要辅助工具之一，主要承担数据保存及数据准确、方便提取的功效，想要做到数据提取的准确性，关键在于业务需求理解能力、执行原理掌握的程度。此时，<strong>SQL子句的执行顺序</strong>就很重要了。</p><pre><code class="mysql">select a,count(*) from test group by a having count(*) &gt; 2; </code></pre><p><strong>思考：</strong>以上sql语句的执行顺序是什么<strong>？</strong></p><p>1、确定需要检索的数据库，执行<strong>from</strong></p><p>2、执行<strong>group by</strong>，对数据通过a列进行分组</p><p>3、执行<strong>having</strong>，过滤分组</p><p>4、执行<strong>select</strong>，返回查询结果</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>想要理解SQL子句执行顺序，其实也很简单，例如where、group by等均是为检索数据服务，所以需要在select之前执行；而order by、limit等均是为检索后数据进行操作（排序、限制行数等）；引用网上一张图展示执行过程如下：</p><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9scE9CckxpYkxwdDV5VWliOVB6UVl2c0VsMjFIcGlhZ2R4U2pIM1BOSXFOU25Dd3pmWWxpYlJEcXRacnoyTWliNVhUT2h6MEdTd0V0cjhYcGpFaWE1YWhIV1kxZy82NDA?x-oss-process=image/format,png" alt="img"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL执行原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mac下忘记mysql的root密码解决方法</title>
       <link href="/2020/08/15/mac-xia-wang-ji-mysql-de-root-mi-ma-jie-jue-fang-fa/"/>
       <url>/2020/08/15/mac-xia-wang-ji-mysql-de-root-mi-ma-jie-jue-fang-fa/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="禁用验证登录数据库"><a href="#禁用验证登录数据库" class="headerlink" title="禁用验证登录数据库"></a>禁用验证登录数据库</h2><p>1关闭mysql服务，进入系统偏好设置-MySQL，点击Stop MySQL Server。</p><img src="/Users/mc/Library/Application Support/typora-user-images/image-20200817111853754.png" alt="image-20200817111853754" style="zoom:50%;" /><img src="/Users/mc/Library/Application Support/typora-user-images/image-20200817111922604.png" alt="image-20200817111922604" style="zoom:50%;" /><p>2、启动终端（terminal）</p><p>输入：</p><pre><code class="shell">sudo su //进入管理员模式cd /usr/local/mysql/bin/ //进入mysql目录 ./mysqld_safe --skip-grant-tables &amp; //禁用mysql的验证功能</code></pre><p>3、通过mysql workbench进入数据库，此时已经不需要密码验证。</p><h4 id="通过此方法在忘记密码的情况下进入了数据库，但还是未能修改密码，难以保证以后是否会出问题。本人最后采用了重装mysql服务的方式彻底解决了问题，建议做好密码备份。"><a href="#通过此方法在忘记密码的情况下进入了数据库，但还是未能修改密码，难以保证以后是否会出问题。本人最后采用了重装mysql服务的方式彻底解决了问题，建议做好密码备份。" class="headerlink" title="通过此方法在忘记密码的情况下进入了数据库，但还是未能修改密码，难以保证以后是否会出问题。本人最后采用了重装mysql服务的方式彻底解决了问题，建议做好密码备份。"></a>通过此方法在忘记密码的情况下进入了数据库，但还是未能修改密码，难以保证以后是否会出问题。本人最后采用了<em>重装mysql服务</em>的方式彻底解决了问题，<em>建议做好密码备份</em>。</h4>]]></content>
       
       
+      <categories>
+          
+          <category> 数据分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
       
     </entry>
     
