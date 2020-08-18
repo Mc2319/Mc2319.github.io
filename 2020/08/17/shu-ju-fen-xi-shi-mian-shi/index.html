@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SQL执行顺序, coding">
+    <meta name="keywords" content="数据分析师面试, coding">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SQL执行顺序 | coding</title>
+    <title>数据分析师面试 | coding</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SQL执行顺序</h1>
+                    <h1 class="description center-align post-title">数据分析师面试</h1>
                 </div>
             </div>
         </div>
@@ -430,8 +430,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/MySQL%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86/">
-                                <span class="chip bg-color">MySQL执行原理</span>
+                            <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                                <span class="chip bg-color">面试题</span>
                             </a>
                         
                     </div>
@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    251
+                    1.1k
                 </div>
                 
 
@@ -481,18 +481,71 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="SQL执行顺序"><a href="#SQL执行顺序" class="headerlink" title="SQL执行顺序"></a>SQL执行顺序</h2><p>数据库作为作为数据分析的重要辅助工具之一，主要承担数据保存及数据准确、方便提取的功效，想要做到数据提取的准确性，关键在于业务需求理解能力、执行原理掌握的程度。此时，<strong>SQL子句的执行顺序</strong>就很重要了。</p>
-<pre><code class="mysql">select a,count(*) 
-from test 
-group by a 
-having count(*) &gt; 2; </code></pre>
-<p><strong>思考：</strong>以上sql语句的执行顺序是什么<strong>？</strong></p>
-<p>1、确定需要检索的数据库，执行<strong>from</strong></p>
-<p>2、执行<strong>group by</strong>，对数据通过a列进行分组</p>
-<p>3、执行<strong>having</strong>，过滤分组</p>
-<p>4、执行<strong>select</strong>，返回查询结果</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>想要理解SQL子句执行顺序，其实也很简单，例如where、group by等均是为检索数据服务，所以需要在select之前执行；而order by、limit等均是为检索后数据进行操作（排序、限制行数等）；引用网上一张图展示执行过程如下：</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9scE9CckxpYkxwdDV5VWliOVB6UVl2c0VsMjFIcGlhZ2R4U2pIM1BOSXFOU25Dd3pmWWxpYlJEcXRacnoyTWliNVhUT2h6MEdTd0V0cjhYcGpFaWE1YWhIV1kxZy82NDA?x-oss-process=image/format,png" alt="img"></p>
+                <h1 id="数据分析理论"><a href="#数据分析理论" class="headerlink" title="数据分析理论"></a>数据分析理论</h1><p>书籍推荐<strong>《数据分析：企业的贤内助》</strong>，书中通过故事场景搭建，来讲述数据分析的一些基本概念及对企业的帮助，相比枯燥的理论书籍，对入门者更友好一些。</p>
+<h4 id="1、数据分析的目的或者作用"><a href="#1、数据分析的目的或者作用" class="headerlink" title="1、数据分析的目的或者作用"></a>1、数据分析的目的或者作用</h4><p>套用哆啦A梦的4个宝贝：</p>
+<p>行为预见镜——帮助企业识别机会、规避风险；</p>
+<p>问题药丸——帮助企业诊断问题、亡羊补牢；</p>
+<p>跟踪摄像机——帮助企业评估效果、改进营销；</p>
+<p>引力动力器——帮助企业提高效率、加强管理；</p>
+<p>在回答该问题时，结合自己简历中的项目或者之前工作经验，选择与之拟合的点，展开描述，引导面试官向你熟悉的方向提问。</p>
+<h4 id="2、数据分析的基本流程"><a href="#2、数据分析的基本流程" class="headerlink" title="2、数据分析的基本流程"></a>2、数据分析的基本流程</h4><p>设计方案——数据采集——数据处理（录入、清洗、加工等）——数据分析；</p>
+<p>该流程在<strong>《数据分析：企业的贤内助》</strong>书中有更为详细的描述，可参考书中内容，面试时自行展开。</p>
+<h4 id="3、简单介绍下之前自己使用的数据处理工具"><a href="#3、简单介绍下之前自己使用的数据处理工具" class="headerlink" title="3、简单介绍下之前自己使用的数据处理工具"></a>3、简单介绍下之前自己使用的数据处理工具</h4><p>使用过的工具有ETL工具（kettle）、数据库、Excel、python；</p>
+<h4 id="4、数据缺失的时候，你该怎么处理"><a href="#4、数据缺失的时候，你该怎么处理" class="headerlink" title="4、数据缺失的时候，你该怎么处理"></a>4、数据缺失的时候，你该怎么处理</h4><p>删除还有缺失值的个别分析对象（简单删除法、权重法）；</p>
+<p>缺失值补录（平均值补录、特殊值补录、人工填写、多重填补、回归方程填补、K最近距离邻法、就近补齐），由于在之前工作中经常使用平均值及K最近距离邻法补录数据，在回答时对这两个方案进行了展开描述，各位在面试时可以根据实际情况进行调节；</p>
+<p>不处理。</p>
+<h1 id="数据库基础"><a href="#数据库基础" class="headerlink" title="数据库基础"></a>数据库基础</h1><p>对sql语句及性能优化考察较多，本人初学入门使用书籍<strong>《sql必知必会》</strong>，可结合<a target="_blank" rel="noopener" href="https://www.runoob.com/sql/sql-tutorial.html">菜鸟教程SQL语句使用</a>基本可以满足大部分工作场景的使用。</p>
+<h4 id="1、如何实现行转列（由于是电话面试，只描述了大概方法）"><a href="#1、如何实现行转列（由于是电话面试，只描述了大概方法）" class="headerlink" title="1、如何实现行转列（由于是电话面试，只描述了大概方法）"></a>1、如何实现行转列（由于是电话面试，只描述了大概方法）</h4><p>使用<strong>case when then</strong>的方法。详情见博文<a href="">case when函数</a></p>
+<h4 id="2、sql优化方式有哪些"><a href="#2、sql优化方式有哪些" class="headerlink" title="2、sql优化方式有哪些"></a>2、sql优化方式有哪些</h4><p>（1）建立索引，详见博文<a href="">MySQL索引</a>；</p>
+<p><strong>注意：</strong>避免在建立索引的数据列上进行下列操作：</p>
+<p>◆避免对索引字段进行计算操作</p>
+<p>◆避免在索引字段上使用not，&lt;&gt;，!=</p>
+<p>◆避免在索引列上使用IS NULL和IS NOT NULL</p>
+<p>◆避免在索引列上出现数据类型转换</p>
+<p>◆避免在索引字段上使用函数</p>
+<p>◆避免建立索引的列中使用空值</p>
+<p>◆避免在复杂查询中使用like，**%**会导致相关列的索引无法使用，可以通过临时表做关联或采用其他解决办法实现相同效果。</p>
+<p>（2）避免在<strong>where</strong>子句中使用in、not in、or或者having，可以使用exist 和not exist代替 in和not in；</p>
+<pre><code class="mysql">--优化前
+select 列名 
+from table1_name 
+where id1 not in (select id2 from table2_name);
+
+--优化后
+select 列名 
+from table1_name 
+where id1 not exist (select id2 from table2_name);</code></pre>
+<p>不用使用字符格式声明数字(日期)的字符值，要使用数字格式声明，否则会使索引无效，产生全表扫描。</p>
+<pre><code class="mysql">--优化前
+select 列名
+from table_name
+where score = ‘100’;
+
+优化后
+select 列名
+from table_name
+where score = 100;</code></pre>
+<p>（3）如表中数据量较大，分页查询使用到limit时，可以通过优化sql语句，减少回表操作。将查询条件放到子查询中，子查询只查询主键id，然后通过子查询查询到的确定的主键id关联查询其他的属性字段。</p>
+<pre><code class="mysql">--正常查询
+select 字段
+from table_name
+where 条件
+limit ..;
+
+--优化后sql
+select 字段
+from table_name 表1
+right join
+(
+  select 主键id
+  from table_name
+  where 条件
+  limit..;
+) 表2 on 表2主键id = 表1主键id;</code></pre>
+<h4 id="3、怎么判断一个sql语句是否使用了索引"><a href="#3、怎么判断一个sql语句是否使用了索引" class="headerlink" title="3、怎么判断一个sql语句是否使用了索引"></a>3、怎么判断一个sql语句是否使用了索引</h4><p>在查询语句前加<strong>explain</strong>，详情见博文<a href="">判断sql语句是否使用索引查询</a></p>
+<h4 id="4、是否使用过存储过程，怎么定义"><a href="#4、是否使用过存储过程，怎么定义" class="headerlink" title="4、是否使用过存储过程，怎么定义"></a>4、是否使用过存储过程，怎么定义</h4><p>见博文<a href="">数据库存储过程</a></p>
+<h1 id="数据分析可视化工具"><a href="#数据分析可视化工具" class="headerlink" title="数据分析可视化工具"></a>数据分析可视化工具</h1><p>Power BI、tableau等工具的一些使用经历。</p>
+<h1 id="统计学、数学基本理论"><a href="#统计学、数学基本理论" class="headerlink" title="统计学、数学基本理论"></a>统计学、数学基本理论</h1><p>答得较差，题目都忘了</p>
 
             </div>
             <hr/>
@@ -518,7 +571,7 @@ having count(*) &gt; 2; </code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/08/17/sql-zhi-xing-shun-xu/">http://yoursite.com/2020/08/17/sql-zhi-xing-shun-xu/</a>
+                    <a href="http://yoursite.com/2020/08/17/shu-ju-fen-xi-shi-mian-shi/">http://yoursite.com/2020/08/17/shu-ju-fen-xi-shi-mian-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -556,8 +609,8 @@ having count(*) &gt; 2; </code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/MySQL%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86/">
-                                    <span class="chip bg-color">MySQL执行原理</span>
+                                <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                                    <span class="chip bg-color">面试题</span>
                                 </a>
                             
                         </div>
@@ -729,6 +782,56 @@ having count(*) &gt; 2; </code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
+                <a href="/2020/08/19/sql-zhi-case-when-han-shu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="SQL之case when函数">
+                        
+                        <span class="card-title">SQL之case when函数</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一般来说
+
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
+                                    数据分析
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/SQL%E8%AF%AD%E5%8F%A5/">
+                        <span class="chip bg-color">SQL语句</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2020/08/17/python-shu-ju-fen-xi-zhong-de-bao/">
                     <div class="card-image">
                         
@@ -745,9 +848,9 @@ having count(*) &gt; 2; </code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -755,63 +858,6 @@ having count(*) &gt; 2; </code></pre>
                             
                         </span>
                     </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/08/15/mac-xia-wang-ji-mysql-de-root-mi-ma-jie-jue-fang-fa/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="mac下忘记mysql的root密码解决方法">
-                        
-                        <span class="card-title">mac下忘记mysql的root密码解决方法</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            禁用验证登录数据库1关闭mysql服务，进入系统偏好设置-MySQL，点击Stop MySQL Server。
-
-
-
-
-2、启动终端（terminal）
-输入：
-sudo su //进入管理员模式
-cd /usr/local/mysql/b
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-15
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
-                                    数据分析
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
-                    </a>
-                    
                 </div>
                 
             </div>
