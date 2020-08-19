@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    340
                 </div>
                 
 
@@ -481,7 +481,41 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="MySQL索引"><a href="#MySQL索引" class="headerlink" title="MySQL索引"></a>MySQL索引</h1><p>索引作为最常见的SQL优化手段，其建立对于数据库性能是很重要的，可以大大提高数据库的检索速度、SQL执行效率。</p>
+<h3 id="普通索引"><a href="#普通索引" class="headerlink" title="普通索引"></a>普通索引</h3><h4 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h4><pre><code class="mysql">--指定列索引
+create index 索引名称 on 表名(索引列);
+
+--添加索引列
+alter table 表名 add index 索引名(列名)；
+
+创建表的时候指定索引列
+create table 表名
+(
+  a  int not null,
+  ...,
+  index (列名)
+);</code></pre>
+<p><strong>注意：</strong>如果遇到字段太长，无法添加索引且不能减少字段长度的时候，则可以指定索引长度；</p>
+<pre><code class="mysql">create index 索引名称 on 表名(索引列(size));</code></pre>
+<p><strong>size</strong>为索引长度。</p>
+<h4 id="创建唯一索引"><a href="#创建唯一索引" class="headerlink" title="创建唯一索引"></a>创建唯一索引</h4><p>与前面的普通索引类似，但索引列的值必须唯一，可以为null。如果是组合索引，则列值的组合必须唯一。</p>
+<pre><code class="mysql">--指定索引列
+create unique index 索引名 on 表名(索引列(size));
+
+--添加索引列
+alter table 表名 add unique 索引名(索引列(size));
+
+--创建表的时候指定索引列
+create table 表名
+(
+  a  int not null,
+  ...,
+  unique (列名)
+);</code></pre>
+<h4 id="显示索引信息"><a href="#显示索引信息" class="headerlink" title="显示索引信息"></a>显示索引信息</h4><p>显示表中索引相关信息，可以通过添加\G来格式化输出信息。</p>
+<pre><code class="mysql">show index from 表名;\G</code></pre>
+<h4 id="查看SQL语句是否使用索引"><a href="#查看SQL语句是否使用索引" class="headerlink" title="查看SQL语句是否使用索引"></a>查看SQL语句是否使用索引</h4><p>使用<strong>explain</strong>，详见博文<a target="_blank" rel="noopener" href="https://mc2319.github.io/2020/08/19/pan-duan-sql-yu-ju-shi-fou-shi-yong-suo-yin-cha-xun/">判断sql语句是否使用索引查询</a>。</p>
+
             </div>
             <hr/>
 
@@ -729,7 +763,9 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            使用执行计划explain查看，在select语句之前添加explain，实例如下
+mysql&gt; explain SELECT * from mytable;
++----+-------------+---------+-------
                         
                     </div>
                     <div class="publish-info">
@@ -778,8 +814,17 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一般来说
+                            case函数使用case具有简单case函数和case搜索函数两种格式。
+实例：
+--创建表
+CREATE TABLE users (
+id INT, 
+NAME varchar(16), 
+sex int
+);
 
+--插入数据
+inser
                         
                     </div>
                     <div class="publish-info">
@@ -1009,7 +1054,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.9k</span>&nbsp;字
+                class="white-color">5.6k</span>&nbsp;字
             
             
             

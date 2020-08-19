@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SQL之case when函数, coding">
+    <meta name="keywords" content="SQL实现数据行转列, coding">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SQL之case when函数 | coding</title>
+    <title>SQL实现数据行转列 | coding</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SQL之case when函数</h1>
+                    <h1 class="description center-align post-title">SQL实现数据行转列</h1>
                 </div>
             </div>
         </div>
@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    430
+                    0
                 </div>
                 
 
@@ -481,61 +481,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="case函数使用"><a href="#case函数使用" class="headerlink" title="case函数使用"></a>case函数使用</h1><p><strong>case</strong>具有简单case函数和case搜索函数两种格式。</p>
-<p>实例：</p>
-<pre><code class="mysql">--创建表
-CREATE TABLE users (
-id INT, 
-NAME varchar(16), 
-sex int
-);
-
---插入数据
-insert into users(id,name) values(1,&#39;张一&#39;);
-insert into users(id,name,sex) values(2,&#39;张二&#39;,1); 
-insert into users(id,name) values(3,&#39;张三&#39;);
-insert into users(id,name) values(4,&#39;张四&#39;);
-insert into users(id,name,sex) values(5,&#39;张五&#39;,2);
-insert into users(id,name,sex) values(6,&#39;张六&#39;,1);
-insert into users(id,name,sex) values(7,&#39;张七&#39;,2);
-insert into users(id,name,sex) values(8,&#39;张八&#39;,1);
-
---表数据
-select * from users
-
---简单case函数
-SELECT
-    u.id,
-    u.NAME,
-    u.sex,
-    (CASE u.sex WHEN 1 THEN &#39;男&#39; WHEN 2 THEN &#39;女&#39; ELSE &#39;空的&#39; END)性别 
-FROM
-    users u;
-
---case搜索函数
-SELECT
-    u.id,
-    u.NAME,
-    u.sex,
-    (CASE WHEN u.sex = &#39;1&#39; THEN &#39;男&#39; WHEN u.sex = &#39;2&#39; THEN &#39;女&#39; ELSE &#39;空的&#39; END)性别 
-FROM
-    users u;</code></pre>
-<p>表结构及数据为</p>
-<p>![image-20200819193223011](/Users/mc/Library/Application Support/typora-user-images/image-20200819193223011.png)</p>
-<p>执行结果为</p>
-<p>![image-20200819193155654](/Users/mc/Library/Application Support/typora-user-images/image-20200819193155654.png)</p>
-<p>根据实例来看，两种方式可以实现相同的功能。简单case函数的写法相对比较简洁，但是和case搜索函数相比，功能方面会有些限制。</p>
-<h1 id="case与sum（max）结合"><a href="#case与sum（max）结合" class="headerlink" title="case与sum（max）结合"></a>case与sum（max）结合</h1><p>case与sum结合使用，可以实现分段统计，实例如下：</p>
-<pre><code class="mysql">SELECT
-    sum( CASE u.sex WHEN 1 THEN 1 ELSE 0 END )男性,
-    sum( CASE u.sex WHEN 2 THEN 1 ELSE 0 END )女性,
-    sum( CASE WHEN u.sex &lt;&gt; 1 AND u.sex &lt;&gt; 2 THEN 1 ELSE 0 END )性别为空 
-FROM
-    users u;</code></pre>
-<p>输出结果为：</p>
-<p>![image-20200819193102557](/Users/mc/Library/Application Support/typora-user-images/image-20200819193102557.png)</p>
-<p><strong>注：</strong>使用该函数还可实现行转列的查询，详情见博文</p>
-
+                
             </div>
             <hr/>
 
@@ -560,7 +506,7 @@ FROM
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/08/19/sql-zhi-case-when-han-shu/">http://yoursite.com/2020/08/19/sql-zhi-case-when-han-shu/</a>
+                    <a href="http://yoursite.com/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/">http://yoursite.com/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -767,34 +713,30 @@ FROM
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/08/19/mysql-suo-yin/">
+                <a href="/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="MySQL索引">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="SQL实现数据行转列">
                         
-                        <span class="card-title">MySQL索引</span>
+                        <span class="card-title">SQL实现数据行转列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MySQL索引索引作为最常见的SQL优化手段，其建立对于数据库性能是很重要的，可以大大提高数据库的检索速度、SQL执行效率。
-普通索引创建索引--指定列索引
-create index 索引名称 on 表名(索引列);
-
---添加索引列
-al
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -807,6 +749,7 @@ al
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -825,26 +768,27 @@ al
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/17/shu-ju-fen-xi-shi-mian-shi/">
+                <a href="/2020/08/19/shu-ju-ku-cun-chu-guo-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="数据分析师面试">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="数据库存储过程">
                         
-                        <span class="card-title">数据分析师面试</span>
+                        <span class="card-title">数据库存储过程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据分析理论书籍推荐《数据分析：企业的贤内助》，书中通过故事场景搭建，来讲述数据分析的一些基本概念及对企业的帮助，相比枯燥的理论书籍，对入门者更友好一些。
-1、数据分析的目的或者作用套用哆啦A梦的4个宝贝：
-行为预见镜——帮助企业识别机会、
+                            存储过程引用《SQL必知必会》中的定义，存储过程就是为以后使用而保存的一条或多条 SQL 语句。
+可将其视为批文件，虽然它们的作用不仅限于批处理。
+注意：
+微软的Access和SQLite不支持存储过程，MySQL 5.0之前的版本不支持存
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
                             </span>
                         <span class="publish-author">
                             
@@ -861,8 +805,8 @@ al
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                        <span class="chip bg-color">面试题</span>
+                    <a href="/tags/SQL%E8%AF%AD%E5%8F%A5/">
+                        <span class="chip bg-color">SQL语句</span>
                     </a>
                     
                 </div>

@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    374
                 </div>
                 
 
@@ -481,7 +481,29 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>使用执行计划<strong>explain</strong>查看，在select语句之前添加explain，实例如下</p>
+<pre><code>mysql&gt; explain SELECT * from mytable;
++----+-------------+---------+------------+------+---------------+------+---------+------+------+----------+-------+
+| id | select_type | table   | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra |
++----+-------------+---------+------------+------+---------------+------+---------+------+------+----------+-------+
+|  1 | SIMPLE      | mytable | NULL       | ALL  | NULL          | NULL | NULL    | NULL |    1 |   100.00 | NULL  |
++----+-------------+---------+------------+------+---------------+------+---------+------+------+----------+-------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql&gt; 
+</code></pre>
+<p><strong>查询字段详解：</strong></p>
+<p><strong>table：</strong>显示这一行的数据是关于哪张表的</p>
+<p><strong>type：</strong>这是最重要的列，其结果从最好到最差的连接类型为</p>
+<p><strong>system &gt; const &gt; eq_ref &gt; ref &gt;</strong> fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL</p>
+<p>一般来说，得保证查询至少达到range级别，最好能达到ref。否则该sql存在性能问题，需要优化。</p>
+<p><strong>possible_keys：</strong>显示可能应用在这张表中的索引。如果为空，没有可能的索引。可以为相关的域从WHERE语句中选择一个合适的语句</p>
+<p><strong>key：</strong> 实际使用的索引。如果为NULL，则没有使用索引。很少的情况下，MYSQL会选择优化不足的索引。这种情况下，可以在SELECT语句中使用USE INDEX（indexname）来强制使用一个索引或者用IGNORE INDEX（indexname）来强制MYSQL忽略索引</p>
+<p><strong>key_len：</strong>使用的索引的长度。在不损失精确性的情况下，长度越短越好</p>
+<p><strong>ref：</strong>显示索引的哪一列被使用了，如果可能的话，是一个常数</p>
+<p><strong>rows：</strong>MYSQL认为必须检查的用来返回请求数据的行数</p>
+<p><strong>Extra：</strong>关于MYSQL如何解析查询的额外信息。</p>
+
             </div>
             <hr/>
 
@@ -729,7 +751,10 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            存储过程引用《SQL必知必会》中的定义，存储过程就是为以后使用而保存的一条或多条 SQL 语句。
+可将其视为批文件，虽然它们的作用不仅限于批处理。
+注意：
+微软的Access和SQLite不支持存储过程，MySQL 5.0之前的版本不支持存
                         
                     </div>
                     <div class="publish-info">
@@ -778,7 +803,12 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            MySQL索引索引作为最常见的SQL优化手段，其建立对于数据库性能是很重要的，可以大大提高数据库的检索速度、SQL执行效率。
+普通索引创建索引--指定列索引
+create index 索引名称 on 表名(索引列);
+
+--添加索引列
+al
                         
                     </div>
                     <div class="publish-info">
@@ -1008,7 +1038,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.9k</span>&nbsp;字
+                class="white-color">5.6k</span>&nbsp;字
             
             
             
