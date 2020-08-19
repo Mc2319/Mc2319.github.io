@@ -8,7 +8,7 @@
       <link href="/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/"/>
       <url>/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>数据分析中经典sql面试题，在做数据统计的时候会需要用到行转列，案例如下。</p><pre><code class="mysql">--建表语句CREATE TABLE students( Id int NOT NULL PRIMARY KEY AUTO_INCREMENT, UserName VARCHAR(50) NULL, Subject VARCHAR(50) NULL, Source numeric(18, 0) NULL) ;--插入数据INSERT INTO students(UserName,Subject,Source) VALUES (&#39;张三&#39;,&#39;语文&#39;,60);INSERT INTO students(UserName,Subject,Source) VALUES  (&#39;李四&#39;,&#39;数学&#39;,75);INSERT INTO students(UserName,Subject,Source) VALUES  (&#39;王五&#39;,&#39;英语&#39;,80);INSERT INTO students(UserName,Subject,Source) VALUES  (&#39;王五&#39;,&#39;数学&#39;,70);INSERT INTO students(UserName,Subject,Source) VALUES  (&#39;王五&#39;,&#39;语文&#39;,68);INSERT INTO students(UserName,Subject,Source) VALUES  (&#39;李四&#39;,&#39;语文&#39;,80);INSERT INTO students(UserName,Subject,Source) VALUES  (&#39;张三&#39;,&#39;英语&#39;,65);</code></pre><p>表结构与数据如下</p><p><img src="/Users/mc/blog/source/_posts/image-20200819200534591.png" alt="image-20200819200534591"></p><p>需要实现如下查询结果：</p><p><img src="/Users/mc/blog/source/_posts/image-20200819200648860.png" alt="image-20200819200648860"></p><p><strong>实现如下：</strong>使用case when实现静态行专列</p><pre><code class="mysql">--case1SELECT    UserName 姓名,    sum( CASE SUBJECT WHEN &#39;语文&#39; THEN Source ELSE 0 END ) 语文,    sum( CASE SUBJECT WHEN &#39;数学&#39; THEN Source ELSE 0 END ) 数学,    sum( CASE SUBJECT WHEN &#39;英语&#39; THEN Source ELSE 0 END ) 英语 FROM    students GROUP BY    UserName;--case2    SELECT    UserName 姓名,    max( CASE SUBJECT WHEN &#39;语文&#39; THEN Source ELSE 0 END ) 语文,    max( CASE SUBJECT WHEN &#39;数学&#39; THEN Source ELSE 0 END ) 数学,    max( CASE SUBJECT WHEN &#39;英语&#39; THEN Source ELSE 0 END ) 英语 FROM    students GROUP BY    UserName;</code></pre><p><strong>注意：</strong>sum、max均为实现聚合作用，以UserName分组聚合。</p>]]></content>
       
       
       <categories>
@@ -20,7 +20,7 @@
       
         <tags>
             
-            <tag> SQL语句 </tag>
+            <tag> SQL语句,面试题 </tag>
             
         </tags>
       
