@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    370
+                    232
                 </div>
                 
 
@@ -521,19 +521,7 @@ SELECT
 FROM
     users u;</code></pre>
 <p>表结构及数据为</p>
-<p><img src="/Users/mc/blog/source/_posts/image-20200819193223011.png" alt="image-20200819193223011"></p>
-<p>执行结果为</p>
-<p><img src="/Users/mc/blog/source/_posts/image-20200819193155654.png" alt="image-20200819193155654"></p>
-<p>根据实例来看，两种方式可以实现相同的功能。简单case函数的写法相对比较简洁，但是和case搜索函数相比，功能方面会有些限制。</p>
-<h1 id="case与sum（max）结合"><a href="#case与sum（max）结合" class="headerlink" title="case与sum（max）结合"></a>case与sum（max）结合</h1><p>case与sum结合使用，可以实现分段统计，实例如下：</p>
-<pre><code class="mysql">SELECT
-    sum( CASE u.sex WHEN 1 THEN 1 ELSE 0 END )男性,
-    sum( CASE u.sex WHEN 2 THEN 1 ELSE 0 END )女性,
-    sum( CASE WHEN u.sex &lt;&gt; 1 AND u.sex &lt;&gt; 2 THEN 1 ELSE 0 END )性别为空 
-FROM
-    users u;</code></pre>
-<p>输出结果为：</p>
-<p><img src="/2020/08/19/sql-zhi-case-when-han-shu/%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87.png" class="" title="输出结果 % }&lt;&#x2F;p&gt; &lt;p&gt;&lt;strong&gt;注：&lt;&#x2F;strong&gt;使用该函数还可实现行转列的查询，详情见博文&lt;a href&#x3D;https:&#x2F;&#x2F;mc2319.github.io&#x2F;2020&#x2F;08&#x2F;19&#x2F;sql-shi-xian-shu-ju-xing-zhuan-lie&#x2F;&gt;SQL实现数据行转列&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;">
+<p><img src="/2020/08/19/sql-zhi-case-when-han-shu/%E8%A1%A8%E7%BB%93%E6%9E%84%E5%92%8C%E6%95%B0%E6%8D%AE.png" class="" title="表结构和数据 % }&lt;&#x2F;p&gt; &lt;p&gt;执行结果为&lt;&#x2F;p&gt; &lt;p&gt;{% asset_img 执行结果.png 执行结果 % }&lt;&#x2F;p&gt; &lt;p&gt;根据实例来看，两种方式可以实现相同的功能。简单case函数的写法相对比较简洁，但是和case搜索函数相比，功能方面会有些限制。&lt;&#x2F;p&gt; &lt;h1 id&#x3D;case与sum（max）结合&gt;&lt;a href&#x3D;#case与sum（max）结合 class&#x3D;headerlink title&#x3D;case与sum（max）结合&gt;&lt;&#x2F;a&gt;case与sum（max）结合&lt;&#x2F;h1&gt;&lt;p&gt;case与sum结合使用，可以实现分段统计，实例如下：&lt;&#x2F;p&gt; &lt;pre&gt;&lt;code class&#x3D;mysql&gt;SELECT sum( CASE u.sex WHEN 1 THEN 1 ELSE 0 END )男性, sum( CASE u.sex WHEN 2 THEN 1 ELSE 0 END )女性, sum( CASE WHEN u.sex &lt;&gt; 1 AND u.sex &lt;&gt; 2 THEN 1 ELSE 0 END )性别为空 FROM users u;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt; &lt;p&gt;输出结果为：&lt;&#x2F;p&gt; &lt;p&gt;{% asset_img 输出结果图片.png 输出结果 % }&lt;&#x2F;p&gt; &lt;p&gt;&lt;strong&gt;注：&lt;&#x2F;strong&gt;使用该函数还可实现行转列的查询，详情见博文&lt;a href&#x3D;https:&#x2F;&#x2F;mc2319.github.io&#x2F;2020&#x2F;08&#x2F;19&#x2F;sql-shi-xian-shu-ju-xing-zhuan-lie&#x2F;&gt;SQL实现数据行转列&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;">
             </div>
             <hr/>
 
@@ -1067,7 +1055,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.9k</span>&nbsp;字
+                class="white-color">5.7k</span>&nbsp;字
             
             
             
