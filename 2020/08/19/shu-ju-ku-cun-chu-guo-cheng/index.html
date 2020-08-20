@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"></head>
+<meta name="generator" content="Hexo 5.0.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
 <body>
@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.6k
+                    1.4k
                 </div>
                 
 
@@ -505,8 +505,8 @@
 </li>
 </ul>
 <h1 id="创建删除存储过程"><a href="#创建删除存储过程" class="headerlink" title="创建删除存储过程"></a>创建删除存储过程</h1><p>创建存储过程：</p>
-<pre><code class="mysql">CREATE
-    [DEFINER = &amp;#123; user | CURRENT_USER &amp;#125;]
+<pre class=" language-mysql"><code class="language-mysql">CREATE
+    [DEFINER = &#123; user | CURRENT_USER &#125;]
 　PROCEDURE sp_name ([proc_parameter[,...]])
     [characteristic ...] routine_body
 
@@ -514,11 +514,11 @@ proc_parameter:
     [ IN | OUT | INOUT ] param_name type
 
 characteristic:
-    COMMENT &#39;string&#39;
+    COMMENT 'string'
   | LANGUAGE SQL
   | [NOT] DETERMINISTIC
-  | &amp;#123; CONTAINS SQL | NO SQL | READS SQL DATA | MODIFIES SQL DATA &amp;#125;
-  | SQL SECURITY &amp;#123; DEFINER | INVOKER &amp;#125;
+  | &#123; CONTAINS SQL | NO SQL | READS SQL DATA | MODIFIES SQL DATA &#125;
+  | SQL SECURITY &#123; DEFINER | INVOKER &#125;
 
 routine_body:
 　　Valid SQL routine statement
@@ -528,46 +528,46 @@ routine_body:
 　　　　……
 END [end_label]</code></pre>
 <p>声明存储过程</p>
-<pre><code class="mysql">CREATE PROCEDURE demo_in_parameter(IN p_in int);</code></pre>
+<pre class=" language-mysql"><code class="language-mysql">CREATE PROCEDURE demo_in_parameter(IN p_in int);</code></pre>
 <p>存储过程的开始和结束</p>
-<pre><code class="mysql">begin .... end</code></pre>
+<pre class=" language-mysql"><code class="language-mysql">begin .... end</code></pre>
 <p>变量赋值:</p>
-<pre><code class="mysql">SET @p_in=1  </code></pre>
+<pre class=" language-mysql"><code class="language-mysql">SET @p_in=1  </code></pre>
 <p>变量定义:</p>
-<pre><code class="mysql">DECLARE l_int int unsigned default 4000000; </code></pre>
+<pre class=" language-mysql"><code class="language-mysql">DECLARE l_int int unsigned default 4000000; </code></pre>
 <p>创建mysql存储过程、存储函数:</p>
-<pre><code class="mysql">create procedure 存储过程名(参数)</code></pre>
+<pre class=" language-mysql"><code class="language-mysql">create procedure 存储过程名(参数)</code></pre>
 <p>存储过程体:</p>
-<pre><code class="mysql">create function 存储函数名(参数)</code></pre>
+<pre class=" language-mysql"><code class="language-mysql">create function 存储函数名(参数)</code></pre>
 <p>删除存储过程</p>
-<pre><code class="mysql">drop procedure 存储过程名</code></pre>
+<pre class=" language-mysql"><code class="language-mysql">drop procedure 存储过程名</code></pre>
 <h1 id="执行存储过程"><a href="#执行存储过程" class="headerlink" title="执行存储过程"></a>执行存储过程</h1><p>存储过程是先编译后调用。事实上，在实际工作试用中。存储过程的执行远比编写要频繁的多。</p>
-<pre><code class="mysql">call 存储过程名 (执行参数) </code></pre>
+<pre class=" language-mysql"><code class="language-mysql">call 存储过程名 (执行参数) </code></pre>
 <h1 id="存储过程的参数"><a href="#存储过程的参数" class="headerlink" title="存储过程的参数"></a>存储过程的参数</h1><p>在存储过程的定义中需要添加参数，格式如下</p>
-<pre><code class="mysql">create procedure 存储过程名([[in|out|inout] 参数名 数据类型...]);</code></pre>
+<pre class=" language-mysql"><code class="language-mysql">create procedure 存储过程名([[in|out|inout] 参数名 数据类型...]);</code></pre>
 <p><strong>注</strong></p>
 <p><strong>in：</strong>输入参数，表示调用者向存储过程的传入值</p>
 <p><strong>out：</strong>输出参数，表示存储过程向调用者的返回值，可以有多个且只能是变量</p>
 <p><strong>INOUT：（少用）</strong>既表示调用者向过程传入值，又表示过程向调用者传出值（值只能是变量）</p>
 <h1 id="存储过程的变量"><a href="#存储过程的变量" class="headerlink" title="存储过程的变量"></a>存储过程的变量</h1><h4 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h4><p>局部变量的定义需要放在存储过程体的开始</p>
-<pre><code class="mysql">--定义
+<pre class=" language-mysql"><code class="language-mysql">--定义
 declare 变量名 变量数据类型 ;
 
 --实例
-DECLARE l_date date DEFAULT &#39;1999-12-31&#39;; </code></pre>
-<h4 id="变量赋值"><a href="#变量赋值" class="headerlink" title="变量赋值"></a>变量赋值</h4><pre><code class="mysql">set 变量名 = 值 ;</code></pre>
-<h4 id="存储过程中使用用户变量实例"><a href="#存储过程中使用用户变量实例" class="headerlink" title="存储过程中使用用户变量实例"></a>存储过程中使用用户变量实例</h4><pre><code class="mysql">--存储过程定义
-CREATE PROCEDURE GreetWorld( ) SELECT CONCAT(@greeting,&#39; World&#39;);
+DECLARE l_date date DEFAULT '1999-12-31'; </code></pre>
+<h4 id="变量赋值"><a href="#变量赋值" class="headerlink" title="变量赋值"></a>变量赋值</h4><pre class=" language-mysql"><code class="language-mysql">set 变量名 = 值 ;</code></pre>
+<h4 id="存储过程中使用用户变量实例"><a href="#存储过程中使用用户变量实例" class="headerlink" title="存储过程中使用用户变量实例"></a>存储过程中使用用户变量实例</h4><pre class=" language-mysql"><code class="language-mysql">--存储过程定义
+CREATE PROCEDURE GreetWorld( ) SELECT CONCAT(@greeting,' World');
 
 --变量赋值
-set @greeting=&#39;Hello&#39;;
+set @greeting='Hello';
 
 --调用存储过程
 CALL GreetWorld( );
 
 --输出结果
 +----------------------------+
-| CONCAT(@greeting,&#39; World&#39;) |
+| CONCAT(@greeting,' World') |
 +----------------------------+
 | Hello World                |
 +----------------------------+
@@ -575,134 +575,134 @@ CALL GreetWorld( );
 <h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>用户变量名一般用**@**开头；</p>
 <p>用户变量过多会导致程序难以理解及管理，需合理使用。</p>
 <h1 id="存储过程中的控制语句"><a href="#存储过程中的控制语句" class="headerlink" title="存储过程中的控制语句"></a>存储过程中的控制语句</h1><h4 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h4><p>实例：</p>
-<pre><code class="mysql">mysql &gt; DELIMITER //  
-mysql &gt; CREATE PROCEDURE proc3()  
-     -&gt; begin 
-     -&gt; declare x1 varchar(5) default &#39;outer&#39;;  
-     -&gt; begin 
-     -&gt; declare x1 varchar(5) default &#39;inner&#39;;  
-      -&gt; select x1;  
-      -&gt; end;  
-       -&gt; select x1;  
-     -&gt; end;  
-     -&gt; //  
-mysql &gt; DELIMITER ;</code></pre>
-<h4 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h4><h5 id="If-then-else语句"><a href="#If-then-else语句" class="headerlink" title="If-then-else语句"></a>If-then-else语句</h5><pre><code class="mysql">mysql &gt; DELIMITER //  
-mysql &gt; CREATE PROCEDURE proc2(IN parameter int)  
-     -&gt; begin 
-     -&gt; declare var int;  
-     -&gt; set var=parameter+1;  
-     -&gt; if var=0 then 
-     -&gt; insert into t values(17);  
-     -&gt; end if;  
-     -&gt; if parameter=0 then 
-     -&gt; update t set s1=s1+1;  
-     -&gt; else 
-     -&gt; update t set s1=s1+2;  
-     -&gt; end if;  
-     -&gt; end;  
-     -&gt; //  
-mysql &gt; DELIMITER ;</code></pre>
-<h5 id="case语句"><a href="#case语句" class="headerlink" title="case语句"></a>case语句</h5><pre><code class="mysql">mysql &gt; DELIMITER //  
-mysql &gt; CREATE PROCEDURE proc3 (in parameter int)  
-     -&gt; begin 
-     -&gt; declare var int;  
-     -&gt; set var=parameter+1;  
-     -&gt; case var  
-     -&gt; when 0 then   
-     -&gt; insert into t values(17);  
-     -&gt; when 1 then   
-     -&gt; insert into t values(18);  
-     -&gt; else   
-     -&gt; insert into t values(19);  
-     -&gt; end case;  
-     -&gt; end;  
-     -&gt; //  
-mysql &gt; DELIMITER ; 
+<pre class=" language-mysql"><code class="language-mysql">mysql > DELIMITER //  
+mysql > CREATE PROCEDURE proc3()  
+     -> begin 
+     -> declare x1 varchar(5) default 'outer';  
+     -> begin 
+     -> declare x1 varchar(5) default 'inner';  
+      -> select x1;  
+      -> end;  
+       -> select x1;  
+     -> end;  
+     -> //  
+mysql > DELIMITER ;</code></pre>
+<h4 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h4><h5 id="If-then-else语句"><a href="#If-then-else语句" class="headerlink" title="If-then-else语句"></a>If-then-else语句</h5><pre class=" language-mysql"><code class="language-mysql">mysql > DELIMITER //  
+mysql > CREATE PROCEDURE proc2(IN parameter int)  
+     -> begin 
+     -> declare var int;  
+     -> set var=parameter+1;  
+     -> if var=0 then 
+     -> insert into t values(17);  
+     -> end if;  
+     -> if parameter=0 then 
+     -> update t set s1=s1+1;  
+     -> else 
+     -> update t set s1=s1+2;  
+     -> end if;  
+     -> end;  
+     -> //  
+mysql > DELIMITER ;</code></pre>
+<h5 id="case语句"><a href="#case语句" class="headerlink" title="case语句"></a>case语句</h5><pre class=" language-mysql"><code class="language-mysql">mysql > DELIMITER //  
+mysql > CREATE PROCEDURE proc3 (in parameter int)  
+     -> begin 
+     -> declare var int;  
+     -> set var=parameter+1;  
+     -> case var  
+     -> when 0 then   
+     -> insert into t values(17);  
+     -> when 1 then   
+     -> insert into t values(18);  
+     -> else   
+     -> insert into t values(19);  
+     -> end case;  
+     -> end;  
+     -> //  
+mysql > DELIMITER ; 
 case
     when var=0 then
         insert into t values(30);
-    when var&gt;0 then
-    when var&lt;0 then
+    when var>0 then
+    when var<0 then
     else
 end case</code></pre>
 <h4 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h4><h5 id="while-····-end-while"><a href="#while-····-end-while" class="headerlink" title="while ···· end while"></a>while ···· end while</h5><p>在执行前进行检查。</p>
-<pre><code class="mysql">--格式
+<pre class=" language-mysql"><code class="language-mysql">--格式
 while 条件 do
         循环体
 end while;
 
 --实例
-mysql &gt; DELIMITER //  
-mysql &gt; CREATE PROCEDURE proc4()  
-     -&gt; begin 
-     -&gt; declare var int;  
-     -&gt; set var=0;  
-     -&gt; while var&lt;6 do  
-     -&gt; insert into t values(var);  
-     -&gt; set var=var+1;  
-     -&gt; end while;  
-     -&gt; end;  
-     -&gt; //  
-mysql &gt; DELIMITER ;</code></pre>
+mysql > DELIMITER //  
+mysql > CREATE PROCEDURE proc4()  
+     -> begin 
+     -> declare var int;  
+     -> set var=0;  
+     -> while var<6 do  
+     -> insert into t values(var);  
+     -> set var=var+1;  
+     -> end while;  
+     -> end;  
+     -> //  
+mysql > DELIMITER ;</code></pre>
 <h5 id="repeat····-end-repeat"><a href="#repeat····-end-repeat" class="headerlink" title="repeat···· end repeat"></a>repeat···· end repeat</h5><p>在执行操作后进行检查结果。</p>
-<pre><code class="mysql">--格式
+<pre class=" language-mysql"><code class="language-mysql">--格式
 repeat 
         --循环体
 until 循环条件
 end repeat；
 
 --实例
-mysql &gt; DELIMITER //  
-mysql &gt; CREATE PROCEDURE proc5 ()  
-     -&gt; begin   
-     -&gt; declare v int;  
-     -&gt; set v=0;  
-     -&gt; repeat  
-     -&gt; insert into t values(v);  
-     -&gt; set v=v+1;  
-     -&gt; until v&gt;=5  
-     -&gt; end repeat;  
-     -&gt; end;  
-     -&gt; //  
-mysql &gt; DELIMITER ;</code></pre>
+mysql > DELIMITER //  
+mysql > CREATE PROCEDURE proc5 ()  
+     -> begin   
+     -> declare v int;  
+     -> set v=0;  
+     -> repeat  
+     -> insert into t values(v);  
+     -> set v=v+1;  
+     -> until v>=5  
+     -> end repeat;  
+     -> end;  
+     -> //  
+mysql > DELIMITER ;</code></pre>
 <h5 id="loop-·····endloop"><a href="#loop-·····endloop" class="headerlink" title="loop ·····endloop"></a>loop ·····endloop</h5><p>loop循环不需要初始条件，同时和repeat循环一样不需要结束天剑，leave语句的意义是离开循环。</p>
-<pre><code class="mysql">mysql &gt; DELIMITER //  
-mysql &gt; CREATE PROCEDURE proc6 ()  
-     -&gt; begin 
-     -&gt; declare v int;  
-     -&gt; set v=0;  
-     -&gt; LOOP_LABLE:loop  
-     -&gt; insert into t values(v);  
-     -&gt; set v=v+1;  
-     -&gt; if v &gt;=5 then 
-     -&gt; leave LOOP_LABLE;  
-     -&gt; end if;  
-     -&gt; end loop;  
-     -&gt; end;  
-     -&gt; //  
-mysql &gt; DELIMITER ;</code></pre>
+<pre class=" language-mysql"><code class="language-mysql">mysql > DELIMITER //  
+mysql > CREATE PROCEDURE proc6 ()  
+     -> begin 
+     -> declare v int;  
+     -> set v=0;  
+     -> LOOP_LABLE:loop  
+     -> insert into t values(v);  
+     -> set v=v+1;  
+     -> if v >=5 then 
+     -> leave LOOP_LABLE;  
+     -> end if;  
+     -> end loop;  
+     -> end;  
+     -> //  
+mysql > DELIMITER ;</code></pre>
 <h5 id="lables标号"><a href="#lables标号" class="headerlink" title="lables标号"></a>lables标号</h5><p>标号可以用在 begin repeat while 或者 loop 语句前，语句标号只能在合法的语句前面使用。可以跳出循环，使运行指令达到复合语句的最后一步。</p>
 <h4 id="iterate迭代"><a href="#iterate迭代" class="headerlink" title="iterate迭代"></a>iterate迭代</h4><p>iterate通过引用复合语句的标号，来重新开始复合语句</p>
-<pre><code class="mysql">mysql &gt; DELIMITER //  
-mysql &gt; CREATE PROCEDURE proc10 ()  
-     -&gt; begin 
-     -&gt; declare v int;  
-     -&gt; set v=0;  
-     -&gt; LOOP_LABLE:loop  
-     -&gt; if v=3 then   
-     -&gt; set v=v+1;  
-     -&gt; ITERATE LOOP_LABLE;  
-     -&gt; end if;  
-     -&gt; insert into t values(v);  
-     -&gt; set v=v+1;  
-     -&gt; if v&gt;=5 then 
-     -&gt; leave LOOP_LABLE;  
-     -&gt; end if;  
-     -&gt; end loop;  
-     -&gt; end;  
-     -&gt; //  
-mysql &gt; DELIMITER ;</code></pre>
+<pre class=" language-mysql"><code class="language-mysql">mysql > DELIMITER //  
+mysql > CREATE PROCEDURE proc10 ()  
+     -> begin 
+     -> declare v int;  
+     -> set v=0;  
+     -> LOOP_LABLE:loop  
+     -> if v=3 then   
+     -> set v=v+1;  
+     -> ITERATE LOOP_LABLE;  
+     -> end if;  
+     -> insert into t values(v);  
+     -> set v=v+1;  
+     -> if v>=5 then 
+     -> leave LOOP_LABLE;  
+     -> end if;  
+     -> end loop;  
+     -> end;  
+     -> //  
+mysql > DELIMITER ;</code></pre>
 
             </div>
             <hr/>
@@ -1240,7 +1240,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.9k</span>&nbsp;字
+                class="white-color">5.6k</span>&nbsp;字
             
             
             

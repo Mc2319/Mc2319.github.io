@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"></head>
+<meta name="generator" content="Hexo 5.0.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
 <body>
@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    692
+                    635
                 </div>
                 
 
@@ -482,59 +482,59 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>数组是一种特殊的变量，可以在单个变量中存储多个值，并且可以通过索引快速访问这些值</p>
-<h2 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h2><pre><code class="javascript">var arrayName = [a1,a2...]; //数组定义语法
-var animals = [&quot;lion&quot;,&quot;tiger&quot;]; //数组定义实例</code></pre>
+<h2 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arrayName <span class="token operator">=</span> <span class="token punctuation">[</span>a1<span class="token punctuation">,</span>a2<span class="token operator">...</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//数组定义语法</span>
+<span class="token keyword">var</span> animals <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"lion"</span><span class="token punctuation">,</span><span class="token string">"tiger"</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//数组定义实例</span></code></pre>
 <p>上面数组定义实例中，定义名为animals的数组，并为其赋值。</p>
 <h5 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h5><p>数组定义时，多个元素之间用逗号“,”隔开；</p>
 <p>最后一个元素后请不要使用“,”；</p>
 <h2 id="访问数组元素"><a href="#访问数组元素" class="headerlink" title="访问数组元素"></a>访问数组元素</h2><p>通过引用索引号来引用数组的某个元素值</p>
-<pre><code class="javascript">var name = animals[0] ; //访问数组的第一个元素
-document.getElementByld(&quot;demo&quot;).innerHTML = animals ; //引用数组名访问整个数组</code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> name <span class="token operator">=</span> animals<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//访问数组的第一个元素</span>
+document<span class="token punctuation">.</span><span class="token function">getElementByld</span><span class="token punctuation">(</span><span class="token string">"demo"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> animals <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//引用数组名访问整个数组</span></code></pre>
 <p>该实例可以给“name”变量赋值，值为数组animals的第一个元素。</p>
 <h5 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h5><p>数组元素是从0开始索引，[0]为数组的第一个元素。</p>
-<h2 id="修改数组元素"><a href="#修改数组元素" class="headerlink" title="修改数组元素"></a>修改数组元素</h2><pre><code class="javascript">animals[0] = &quot;elephants&quot; ;//修改数组animals中首个元素</code></pre>
+<h2 id="修改数组元素"><a href="#修改数组元素" class="headerlink" title="修改数组元素"></a>修改数组元素</h2><pre class=" language-javascript"><code class="language-javascript">animals<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"elephants"</span> <span class="token punctuation">;</span><span class="token comment" spellcheck="true">//修改数组animals中首个元素</span></code></pre>
 <h2 id="数组与对象"><a href="#数组与对象" class="headerlink" title="数组与对象"></a>数组与对象</h2><p>数组是一种特殊类型的对象。在数组中使用数字来访问其元素，对象中使用名称来访问其“成员”。</p>
-<pre><code class="javascript">//数组
-var animals = [&quot;lion&quot;,&quot;tiger&quot;];
-var name = animals[0]; //返回数组元素“lion”
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//数组</span>
+<span class="token keyword">var</span> animals <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"lion"</span><span class="token punctuation">,</span><span class="token string">"tiger"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> name <span class="token operator">=</span> animals<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//返回数组元素“lion”</span>
 
-//对象
-var archives = &amp;#123;Name:&quot;John&quot;, career:&quot;worker&quot;, age:46&amp;#125;;
-archives.Name; //返回对象成员Name的值“John”</code></pre>
+<span class="token comment" spellcheck="true">//对象</span>
+<span class="token keyword">var</span> archives <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>Name<span class="token punctuation">:</span><span class="token string">"John"</span><span class="token punctuation">,</span> career<span class="token punctuation">:</span><span class="token string">"worker"</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span><span class="token number">46</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+archives<span class="token punctuation">.</span>Name<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//返回对象成员Name的值“John”</span></code></pre>
 <h5 id="注意：-2"><a href="#注意：-2" class="headerlink" title="注意："></a>注意：</h5><p>数组元素可以是对象、函数，甚至数组。</p>
 <p>在 JavaScript 中，<strong>数组</strong>使用<strong>数字索引</strong>。</p>
 <p>在 JavaScript 中，<strong>对象</strong>使用<strong>命名索引</strong>。</p>
 <p><strong>数组是特殊类型的对象，具有数字索引。</strong></p>
 <h2 id="数组属性与方法"><a href="#数组属性与方法" class="headerlink" title="数组属性与方法"></a>数组属性与方法</h2><h4 id="length属性"><a href="#length属性" class="headerlink" title="length属性"></a>length属性</h4><p>length属性返回数组的长度（元素个数）。</p>
-<pre><code class="javascript">var animals = [&quot;lion&quot;,&quot;tiger&quot;];
-animals.length; //返回数组长度2</code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> animals <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"lion"</span><span class="token punctuation">,</span><span class="token string">"tiger"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+animals<span class="token punctuation">.</span>length<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//返回数组长度2</span></code></pre>
 <h4 id="访问数组最后一个元素"><a href="#访问数组最后一个元素" class="headerlink" title="访问数组最后一个元素"></a>访问数组最后一个元素</h4><p>数组元素值得访问通过引用其索引达成，所以访问最后一个元素可以通过数组length属性完成。</p>
-<pre><code class="javascript">var last = animals[animals.length-1]; //返回数组最后一个元素“tiger”</code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> last <span class="token operator">=</span> animals<span class="token punctuation">[</span>animals<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//返回数组最后一个元素“tiger”</span></code></pre>
 <h4 id="遍历数组元素"><a href="#遍历数组元素" class="headerlink" title="遍历数组元素"></a>遍历数组元素</h4><p>遍历数组元素通过for循环，结合数组length属性达成。</p>
-<pre><code class="javascript">var animals, text, fLen, i;
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> animals<span class="token punctuation">,</span> text<span class="token punctuation">,</span> fLen<span class="token punctuation">,</span> i<span class="token punctuation">;</span>
 
-var animals = [&quot;lion&quot;,&quot;tiger&quot;];
-fLen = fruits.length; //数组长度
-text = &quot;&lt;ul&gt;&quot;;
-for (i = 0; i &lt; fLen; i++) &amp;#123;
-     text += &quot;&lt;li&gt;&quot; + fruits[i] + &quot;&lt;/li&gt;&quot;;
-&amp;#125; </code></pre>
+<span class="token keyword">var</span> animals <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"lion"</span><span class="token punctuation">,</span><span class="token string">"tiger"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+fLen <span class="token operator">=</span> fruits<span class="token punctuation">.</span>length<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//数组长度</span>
+text <span class="token operator">=</span> <span class="token string">"&lt;ul>"</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> fLen<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+     text <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">"&lt;li>"</span> <span class="token operator">+</span> fruits<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">"&lt;/li>"</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> </code></pre>
 <p><strong>注</strong>：也可以使用Array.foreach()函数，但是最安全的方法是使用for循环。</p>
-<pre><code class="javascript">var animals, text;
-var animals = [&quot;lion&quot;,&quot;tiger&quot;];
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> animals<span class="token punctuation">,</span> text<span class="token punctuation">;</span>
+<span class="token keyword">var</span> animals <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"lion"</span><span class="token punctuation">,</span><span class="token string">"tiger"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-text = &quot;&lt;ul&gt;&quot;;
-animals.forEach(myFunction);
-text += &quot;&lt;/ul&gt;&quot;;
+text <span class="token operator">=</span> <span class="token string">"&lt;ul>"</span><span class="token punctuation">;</span>
+animals<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>myFunction<span class="token punctuation">)</span><span class="token punctuation">;</span>
+text <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">"&lt;/ul>"</span><span class="token punctuation">;</span>
 
-function myFunction(value) &amp;#123;
-  text += &quot;&lt;li&gt;&quot; + value + &quot;&lt;/li&gt;&quot;;
-&amp;#125;</code></pre>
+<span class="token keyword">function</span> <span class="token function">myFunction</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  text <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">"&lt;li>"</span> <span class="token operator">+</span> value <span class="token operator">+</span> <span class="token string">"&lt;/li>"</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <h4 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h4><p>使用push方法：</p>
-<pre><code class="javascript">var animals = [&quot;lion&quot;,&quot;tiger&quot;];
-animals.push(&quot;elephants&quot;); //为数组添加新元素“elephants”</code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> animals <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"lion"</span><span class="token punctuation">,</span><span class="token string">"tiger"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+animals<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"elephants"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//为数组添加新元素“elephants”</span></code></pre>
 <p><strong>注：</strong>可以使用length属性添加新元素：</p>
-<pre><code class="javascript">animals[animals.length] = &quot;elephants&quot; ;</code></pre>
+<pre class=" language-javascript"><code class="language-javascript">animals<span class="token punctuation">[</span>animals<span class="token punctuation">.</span>length<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"elephants"</span> <span class="token punctuation">;</span></code></pre>
 
             </div>
             <hr/>
@@ -1072,7 +1072,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.9k</span>&nbsp;字
+                class="white-color">5.6k</span>&nbsp;字
             
             
             

@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"></head>
+<meta name="generator" content="Hexo 5.0.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
 <body>
@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    251
+                    250
                 </div>
                 
 
@@ -482,10 +482,10 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="SQL执行顺序"><a href="#SQL执行顺序" class="headerlink" title="SQL执行顺序"></a>SQL执行顺序</h2><p>数据库作为作为数据分析的重要辅助工具之一，主要承担数据保存及数据准确、方便提取的功效，想要做到数据提取的准确性，关键在于业务需求理解能力、执行原理掌握的程度。此时，<strong>SQL子句的执行顺序</strong>就很重要了。</p>
-<pre><code class="mysql">select a,count(*) 
+<pre class=" language-mysql"><code class="language-mysql">select a,count(*) 
 from test 
 group by a 
-having count(*) &gt; 2; </code></pre>
+having count(*) > 2; </code></pre>
 <p><strong>思考：</strong>以上sql语句的执行顺序是什么<strong>？</strong></p>
 <p>1、确定需要检索的数据库，执行<strong>from</strong></p>
 <p>2、执行<strong>group by</strong>，对数据通过a列进行分组</p>
@@ -1016,7 +1016,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.9k</span>&nbsp;字
+                class="white-color">5.6k</span>&nbsp;字
             
             
             

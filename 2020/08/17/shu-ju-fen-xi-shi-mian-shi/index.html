@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"></head>
+<meta name="generator" content="Hexo 5.0.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
 <body>
@@ -506,7 +506,7 @@
 <p>◆避免建立索引的列中使用空值</p>
 <p>◆避免在复杂查询中使用like，**%**会导致相关列的索引无法使用，可以通过临时表做关联或采用其他解决办法实现相同效果。</p>
 <p>（2）避免在<strong>where</strong>子句中使用in、not in、or或者having，可以使用exist 和not exist代替 in和not in；</p>
-<pre><code class="mysql">--优化前
+<pre class=" language-mysql"><code class="language-mysql">--优化前
 select 列名 
 from table1_name 
 where id1 not in (select id2 from table2_name);
@@ -516,7 +516,7 @@ select 列名
 from table1_name 
 where id1 not exist (select id2 from table2_name);</code></pre>
 <p>不用使用字符格式声明数字(日期)的字符值，要使用数字格式声明，否则会使索引无效，产生全表扫描。</p>
-<pre><code class="mysql">--优化前
+<pre class=" language-mysql"><code class="language-mysql">--优化前
 select 列名
 from table_name
 where score = ‘100’;
@@ -526,7 +526,7 @@ select 列名
 from table_name
 where score = 100;</code></pre>
 <p>（3）如表中数据量较大，分页查询使用到limit时，可以通过优化sql语句，减少回表操作。将查询条件放到子查询中，子查询只查询主键id，然后通过子查询查询到的确定的主键id关联查询其他的属性字段。</p>
-<pre><code class="mysql">--正常查询
+<pre class=" language-mysql"><code class="language-mysql">--正常查询
 select 字段
 from table_name
 where 条件
@@ -1078,7 +1078,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.9k</span>&nbsp;字
+                class="white-color">5.6k</span>&nbsp;字
             
             
             
