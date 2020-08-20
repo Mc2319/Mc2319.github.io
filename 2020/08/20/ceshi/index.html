@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SQL实现数据行转列, coding">
+    <meta name="keywords" content="ceshi, coding">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SQL实现数据行转列 | coding</title>
+    <title>ceshi | coding</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SQL实现数据行转列</h1>
+                    <h1 class="description center-align post-title">ceshi</h1>
                 </div>
             </div>
         </div>
@@ -428,29 +428,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/SQL%E8%AF%AD%E5%8F%A5/">
-                                <span class="chip bg-color">SQL语句</span>
-                            </a>
-                        
-                            <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                <span class="chip bg-color">面试题</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
-                                数据分析
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -459,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-08-19
+                    2020-08-20
                 </div>
                 
 
@@ -468,7 +451,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    296
+                    0
                 </div>
                 
 
@@ -485,50 +468,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>数据分析中经典sql面试题，在做数据统计的时候会需要用到行转列，案例如下。</p>
-<pre class=" language-mysql"><code class="language-mysql">--建表语句
-CREATE TABLE students(
- Id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
- UserName VARCHAR(50) NULL,
- Subject VARCHAR(50) NULL,
- Source numeric(18, 0) NULL
-) ;
-
---插入数据
-INSERT INTO students(UserName,Subject,Source) VALUES ('张三','语文',60);
-INSERT INTO students(UserName,Subject,Source) VALUES  ('李四','数学',75);
-INSERT INTO students(UserName,Subject,Source) VALUES  ('王五','英语',80);
-INSERT INTO students(UserName,Subject,Source) VALUES  ('王五','数学',70);
-INSERT INTO students(UserName,Subject,Source) VALUES  ('王五','语文',68);
-INSERT INTO students(UserName,Subject,Source) VALUES  ('李四','语文',80);
-INSERT INTO students(UserName,Subject,Source) VALUES  ('张三','英语',65);</code></pre>
-<p>表结构与数据如下</p>
-<p><img src="/.com//mc/blog/source/_posts/image-20200819200534591.png" alt="image-20200819200534591"></p>
-<p>需要实现如下查询结果：</p>
-<p><img src="/.com//mc/blog/source/_posts/image-20200819200648860.png" alt="image-20200819200648860"></p>
-<p><strong>实现如下：</strong>使用case when实现静态行专列</p>
-<pre class=" language-mysql"><code class="language-mysql">--case1
-SELECT
-    UserName 姓名,
-    sum( CASE SUBJECT WHEN '语文' THEN Source ELSE 0 END ) 语文,
-    sum( CASE SUBJECT WHEN '数学' THEN Source ELSE 0 END ) 数学,
-    sum( CASE SUBJECT WHEN '英语' THEN Source ELSE 0 END ) 英语 
-FROM
-    students 
-GROUP BY
-    UserName;
-
---case2
-    SELECT
-    UserName 姓名,
-    max( CASE SUBJECT WHEN '语文' THEN Source ELSE 0 END ) 语文,
-    max( CASE SUBJECT WHEN '数学' THEN Source ELSE 0 END ) 数学,
-    max( CASE SUBJECT WHEN '英语' THEN Source ELSE 0 END ) 英语 
-FROM
-    students 
-GROUP BY
-    UserName;</code></pre>
-<p><strong>注意：</strong>sum、max均为实现聚合作用，以UserName分组聚合。</p>
+                <p><img src="/.com//abc.jpg" alt="abc"></p>
 
             </div>
             <hr/>
@@ -554,7 +494,7 @@ GROUP BY
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/">http://yoursite.com/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/</a>
+                    <a href="http://yoursite.com/2020/08/20/ceshi/">http://yoursite.com/2020/08/20/ceshi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -591,15 +531,7 @@ GROUP BY
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/SQL%E8%AF%AD%E5%8F%A5/">
-                                    <span class="chip bg-color">SQL语句</span>
-                                </a>
-                            
-                                <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                    <span class="chip bg-color">面试题</span>
-                                </a>
-                            
+                            <span class="chip bg-color">No tag</span>
                         </div>
                     
                 </div>
@@ -765,9 +697,10 @@ GROUP BY
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2020/08/20/ceshi/">
                     <div class="card-image">
@@ -786,9 +719,9 @@ GROUP BY
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -797,6 +730,7 @@ GROUP BY
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -807,22 +741,23 @@ GROUP BY
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/19/shu-ju-ku-cun-chu-guo-cheng/">
+                <a href="/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="数据库存储过程">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="SQL实现数据行转列">
                         
-                        <span class="card-title">数据库存储过程</span>
+                        <span class="card-title">SQL实现数据行转列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            存储过程引用《SQL必知必会》中的定义，存储过程就是为以后使用而保存的一条或多条 SQL 语句。
-可将其视为批文件，虽然它们的作用不仅限于批处理。
-注意：
-微软的Access和SQLite不支持存储过程，MySQL 5.0之前的版本不支持存
+                            数据分析中经典sql面试题，在做数据统计的时候会需要用到行转列，案例如下。
+--建表语句
+CREATE TABLE students(
+ Id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ UserNa
                         
                     </div>
                     <div class="publish-info">
@@ -846,6 +781,10 @@ GROUP BY
                     
                     <a href="/tags/SQL%E8%AF%AD%E5%8F%A5/">
                         <span class="chip bg-color">SQL语句</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="chip bg-color">面试题</span>
                     </a>
                     
                 </div>

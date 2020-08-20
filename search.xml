@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>ceshi</title>
+      <link href="/2020/08/20/ceshi/"/>
+      <url>/2020/08/20/ceshi/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/.com//abc.jpg" alt="abc"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SQL实现数据行转列</title>
       <link href="/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/"/>
       <url>/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/</url>
@@ -110,7 +123,7 @@
       <link href="/2020/08/19/sql-zhi-case-when-han-shu/"/>
       <url>/2020/08/19/sql-zhi-case-when-han-shu/</url>
       
-        <content type="html"><![CDATA[<h1 id="case函数使用"><a href="#case函数使用" class="headerlink" title="case函数使用"></a>case函数使用</h1><p><strong>case</strong>具有简单case函数和case搜索函数两种格式。</p><p>实例：</p><pre class=" language-mysql"><code class="language-mysql">--创建表CREATE TABLE users (id INT, NAME varchar(16), sex int);--插入数据insert into users(id,name) values(1,'张一');insert into users(id,name,sex) values(2,'张二',1); insert into users(id,name) values(3,'张三');insert into users(id,name) values(4,'张四');insert into users(id,name,sex) values(5,'张五',2);insert into users(id,name,sex) values(6,'张六',1);insert into users(id,name,sex) values(7,'张七',2);insert into users(id,name,sex) values(8,'张八',1);--表数据select * from users--简单case函数SELECT    u.id,    u.NAME,    u.sex,    (CASE u.sex WHEN 1 THEN '男' WHEN 2 THEN '女' ELSE '空的' END)性别 FROM    users u;--case搜索函数SELECT    u.id,    u.NAME,    u.sex,    (CASE WHEN u.sex = '1' THEN '男' WHEN u.sex = '2' THEN '女' ELSE '空的' END)性别 FROM    users u;</code></pre><p>表结构及数据为</p><img src="/.com//abc.jpg" alt="执行结果" style="zoom:50%;"><p>执行结果为</p><p>![执行结果](SQL之case when函数/执行结果图片.PNG)</p><p>根据实例来看，两种方式可以实现相同的功能。简单case函数的写法相对比较简洁，但是和case搜索函数相比，功能方面会有些限制。</p><h1 id="case与sum（max）结合"><a href="#case与sum（max）结合" class="headerlink" title="case与sum（max）结合"></a>case与sum（max）结合</h1><p>case与sum结合使用，可以实现分段统计，实例如下：</p><pre class=" language-mysql"><code class="language-mysql">SELECT    sum( CASE u.sex WHEN 1 THEN 1 ELSE 0 END )男性,    sum( CASE u.sex WHEN 2 THEN 1 ELSE 0 END )女性,    sum( CASE WHEN u.sex <> 1 AND u.sex <> 2 THEN 1 ELSE 0 END )性别为空 FROM    users u;</code></pre><p>输出结果为：</p><p><img src="/.com//%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87.PNG" alt="输出结果"></p><p><strong>注：</strong>使用该函数还可实现行转列的查询，详情见博文<a href="https://mc2319.github.io/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/">SQL实现数据行转列</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="case函数使用"><a href="#case函数使用" class="headerlink" title="case函数使用"></a>case函数使用</h1><p><strong>case</strong>具有简单case函数和case搜索函数两种格式。</p><p>实例：</p><pre class=" language-mysql"><code class="language-mysql">--创建表CREATE TABLE users (id INT, NAME varchar(16), sex int);--插入数据insert into users(id,name) values(1,'张一');insert into users(id,name,sex) values(2,'张二',1); insert into users(id,name) values(3,'张三');insert into users(id,name) values(4,'张四');insert into users(id,name,sex) values(5,'张五',2);insert into users(id,name,sex) values(6,'张六',1);insert into users(id,name,sex) values(7,'张七',2);insert into users(id,name,sex) values(8,'张八',1);--表数据select * from users--简单case函数SELECT    u.id,    u.NAME,    u.sex,    (CASE u.sex WHEN 1 THEN '男' WHEN 2 THEN '女' ELSE '空的' END)性别 FROM    users u;--case搜索函数SELECT    u.id,    u.NAME,    u.sex,    (CASE WHEN u.sex = '1' THEN '男' WHEN u.sex = '2' THEN '女' ELSE '空的' END)性别 FROM    users u;</code></pre><p>表结构及数据为</p><img src="/.com//08/19/sql-zhi-case-when-han-shu/abc.jpg" class title="abc"><p>执行结果为</p><p>![执行结果](SQL之case when函数/执行结果图片.PNG)</p><p>根据实例来看，两种方式可以实现相同的功能。简单case函数的写法相对比较简洁，但是和case搜索函数相比，功能方面会有些限制。</p><h1 id="case与sum（max）结合"><a href="#case与sum（max）结合" class="headerlink" title="case与sum（max）结合"></a>case与sum（max）结合</h1><p>case与sum结合使用，可以实现分段统计，实例如下：</p><pre class=" language-mysql"><code class="language-mysql">SELECT    sum( CASE u.sex WHEN 1 THEN 1 ELSE 0 END )男性,    sum( CASE u.sex WHEN 2 THEN 1 ELSE 0 END )女性,    sum( CASE WHEN u.sex <> 1 AND u.sex <> 2 THEN 1 ELSE 0 END )性别为空 FROM    users u;</code></pre><p>输出结果为：</p><p><img src="/.com//%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87.PNG" alt="输出结果"></p><p><strong>注：</strong>使用该函数还可实现行转列的查询，详情见博文<a href="https://mc2319.github.io/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/">SQL实现数据行转列</a></p>]]></content>
       
       
       <categories>
