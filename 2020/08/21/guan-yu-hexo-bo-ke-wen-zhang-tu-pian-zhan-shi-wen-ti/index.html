@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SQL之case when函数, coding">
+    <meta name="keywords" content="关于hexo博客文章图片展示问题, coding">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SQL之case when函数 | coding</title>
+    <title>关于hexo博客文章图片展示问题 | coding</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,7 +313,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SQL之case when函数</h1>
+                    <h1 class="description center-align post-title">关于hexo博客文章图片展示问题</h1>
                 </div>
             </div>
         </div>
@@ -430,8 +430,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SQL%E8%AF%AD%E5%8F%A5/">
-                                <span class="chip bg-color">SQL语句</span>
+                            <a href="/tags/%E5%85%B3%E4%BA%8E%E5%9B%BE%E7%89%87%E5%B1%95%E7%A4%BA/">
+                                <span class="chip bg-color">关于图片展示</span>
                             </a>
                         
                     </div>
@@ -442,8 +442,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
-                                数据分析
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                博客搭建
                             </a>
                         
                     </div>
@@ -455,7 +455,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-08-19
+                    2020-08-21
                 </div>
                 
 
@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    363
+                    1k
                 </div>
                 
 
@@ -481,63 +481,92 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="case函数使用"><a href="#case函数使用" class="headerlink" title="case函数使用"></a>case函数使用</h1><p><strong>case</strong>具有简单case函数和case搜索函数两种格式。</p>
-<p>实例：</p>
-<pre class=" language-mysql"><code class="language-mysql">--创建表
-CREATE TABLE users (
-id INT, 
-NAME varchar(16), 
-sex int
-);
+                <p>博客搭建完成后，在编写博文的过程中，发现需要插入的图片在上传到服务端后不展示，经过一番百度、研究、探索，得出如下解决办法。</p>
+<h1 id="更改配置文件"><a href="#更改配置文件" class="headerlink" title="更改配置文件"></a>更改配置文件</h1><p>在博客根目录下，更改配置参数；</p>
+<pre class=" language-markdown"><code class="language-markdown">post<span class="token italic"><span class="token punctuation">_</span>asset<span class="token punctuation">_</span></span>folder: true
+<span class="token title important"><span class="token punctuation">#</span>表示开始使用本地静态资源</span></code></pre>
+<p>更改完成后执行新建博客文件命令，如下：</p>
+<pre><code>hexo new 文件名称</code></pre>
+<p>添加这行配置后，在生成.md文件的同时，会生成一个同名文件夹，后续博文中用到的相关资源都可以放到该文件夹中。</p>
+<h1 id="引入图片方式"><a href="#引入图片方式" class="headerlink" title="引入图片方式"></a>引入图片方式</h1><h4 id="markdown标准语法"><a href="#markdown标准语法" class="headerlink" title="markdown标准语法"></a>markdown标准语法</h4><p>在Typora中编辑markdown文件时，可以直接插入图片，语法如下：</p>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token url">![图片别名][<span class="token variable">图片.jpg</span>]</span></code></pre>
+<p>这样的好处是在本地Typora编辑器中直接预览。</p>
+<p><strong>注：</strong>在不使用任何插件的情况下，在引用图片时，需要添加文件路径，才能在本地正常预览。但在正常写博文的情况下，不要添加文件夹路径，这是因为在**<code>hexo g</code><strong>命令执行后，会把</strong><u>.md</u><strong>文件渲染成为</strong><u>.html</u><strong>文件，并存放在</strong><code>public/年/月/日</code>**路径下的同名文件夹中，再把所对应的的文件夹下的静态资源，拷贝到该文件夹下，添加路径会导致最后渲染后无法正常显示。</p>
+<h4 id="使用标签插件"><a href="#使用标签插件" class="headerlink" title="使用标签插件"></a>使用标签插件</h4><p>使用标签插件引入图片，语法如下：</p>
+<pre><code>&amp;#123;% asset_img 图片.jpg 图片别名 %&amp;#125;</code></pre>
+<p>该方式无法在本地编辑器预览文章图片。</p>
+<h1 id="使用hexo-asset-image"><a href="#使用hexo-asset-image" class="headerlink" title="使用hexo-asset-image"></a>使用hexo-asset-image</h1><p>为了能够在<strong>本地编辑器里预览图片同时可以在网页中正常加载图片</strong>，引入<u><strong>hexo-asset-image</strong></u>插件，该插件解决的问题就是给本地图片添加绝对路径。</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><pre><code>npm install hexo-asset-image --save</code></pre>
+<p>安装完成后，在本地编辑器可以直接预览图片，在执行**<code>hexo g</code>**生成博客html文件后，发现渲染出来的图片标签使用的是如下路径：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/年/月/日/博客同名文件夹/图片.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+<p>使用**<code>hexo-d</code>**上传至服务器，图片正常显示。</p>
+<h4 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h4><p>在使用<strong>hexo-asset-image</strong>过程中，发现直接使用npm库中的，可能会导致BUG出现，图片在网页中无法正常加载（可能是npm库中的包未更新导致）。经过对渲染后的html文件进行查看，主要是由于路径错误问题引起的。情况如下：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/年/月/日/博客同名文件夹/年/月/日/图片.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 路径重复--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>//.com/年/月/日/博客同名文件夹/图片.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 路径错误--></span></code></pre>
+<h5 id="解决方案如下："><a href="#解决方案如下：" class="headerlink" title="解决方案如下："></a>解决方案如下：</h5><p>打开<strong>hexo-asset-image</strong>安装目录下<strong>index.js</strong>，替换为如下代码即可。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token string">'use strict'</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> cheerio <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'cheerio'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
---插入数据
-insert into users(id,name) values(1,'张一');
-insert into users(id,name,sex) values(2,'张二',1); 
-insert into users(id,name) values(3,'张三');
-insert into users(id,name) values(4,'张四');
-insert into users(id,name,sex) values(5,'张五',2);
-insert into users(id,name,sex) values(6,'张六',1);
-insert into users(id,name,sex) values(7,'张七',2);
-insert into users(id,name,sex) values(8,'张八',1);
+<span class="token comment" spellcheck="true">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span>
+<span class="token keyword">function</span> <span class="token function">getPosition</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> m<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
---表数据
-select * from users
+<span class="token keyword">var</span> version <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>hexo<span class="token punctuation">.</span>version<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+hexo<span class="token punctuation">.</span>extend<span class="token punctuation">.</span>filter<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'after_post_render'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> config <span class="token operator">=</span> hexo<span class="token punctuation">.</span>config<span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>post_asset_folder<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> link <span class="token operator">=</span> data<span class="token punctuation">.</span>permalink<span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>version<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token function">Number</span><span class="token punctuation">(</span>version<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span>
+       <span class="token keyword">var</span> beginPos <span class="token operator">=</span> <span class="token function">getPosition</span><span class="token punctuation">(</span>link<span class="token punctuation">,</span> <span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+       <span class="token keyword">var</span> beginPos <span class="token operator">=</span> <span class="token function">getPosition</span><span class="token punctuation">(</span>link<span class="token punctuation">,</span> <span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".</span>
+    <span class="token keyword">var</span> endPos <span class="token operator">=</span> link<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    link <span class="token operator">=</span> link<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>beginPos<span class="token punctuation">,</span> endPos<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
---简单case函数
-SELECT
-    u.id,
-    u.NAME,
-    u.sex,
-    (CASE u.sex WHEN 1 THEN '男' WHEN 2 THEN '女' ELSE '空的' END)性别 
-FROM
-    users u;
+    <span class="token keyword">var</span> toprocess <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'excerpt'</span><span class="token punctuation">,</span> <span class="token string">'more'</span><span class="token punctuation">,</span> <span class="token string">'content'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> toprocess<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">var</span> key <span class="token operator">=</span> toprocess<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
---case搜索函数
-SELECT
-    u.id,
-    u.NAME,
-    u.sex,
-    (CASE WHEN u.sex = '1' THEN '男' WHEN u.sex = '2' THEN '女' ELSE '空的' END)性别 
-FROM
-    users u;</code></pre>
-<p>表结构及数据为</p>
-<img src="/2020/08/19/sql-zhi-case-when-han-shu/abc.jpg" class title="表结构">
+      <span class="token keyword">var</span> $ <span class="token operator">=</span> cheerio<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        ignoreWhitespace<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        xmlMode<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        lowerCaseTags<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        decodeEntities<span class="token punctuation">:</span> <span class="token boolean">false</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<p>执行结果为</p>
-<img src="/2020/08/19/sql-zhi-case-when-han-shu/%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87.png" class title="执行结果">
-
-<p>根据实例来看，两种方式可以实现相同的功能。简单case函数的写法相对比较简洁，但是和case搜索函数相比，功能方面会有些限制。</p>
-<h1 id="case与sum（max）结合"><a href="#case与sum（max）结合" class="headerlink" title="case与sum（max）结合"></a>case与sum（max）结合</h1><p>case与sum结合使用，可以实现分段统计，实例如下：</p>
-<pre class=" language-mysql"><code class="language-mysql">SELECT
-    sum( CASE u.sex WHEN 1 THEN 1 ELSE 0 END )男性,
-    sum( CASE u.sex WHEN 2 THEN 1 ELSE 0 END )女性,
-    sum( CASE WHEN u.sex <> 1 AND u.sex <> 2 THEN 1 ELSE 0 END )性别为空 
-FROM
-    users u;</code></pre>
-<p>输出结果为：</p>
-<img src="/2020/08/19/sql-zhi-case-when-han-shu/%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E5%9B%BE%E7%89%87.png" class title="输出结果">
-
-<p><strong>注：</strong>使用该函数还可实现行转列的查询，详情见博文<a target="_blank" rel="noopener" href="https://mc2319.github.io/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/">SQL实现数据行转列</a></p>
+      <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'img'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'src'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// For windows style path, we replace '\' to '/'.</span>
+            <span class="token keyword">var</span> src <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'src'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'\\'</span><span class="token punctuation">,</span> <span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token regex">/http[s]*.*|\/\/.*/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>src<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+               <span class="token operator">!</span><span class="token regex">/^\s*\//</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>src<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+              <span class="token comment" spellcheck="true">// For "about" page, the first part of "src" can't be removed.</span>
+              <span class="token comment" spellcheck="true">// In addition, to support multi-level local directory.</span>
+              <span class="token keyword">var</span> linkArray <span class="token operator">=</span> link<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> elem <span class="token operator">!=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+              <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">var</span> srcArray <span class="token operator">=</span> src<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> elem <span class="token operator">!=</span> <span class="token string">''</span> <span class="token operator">&amp;&amp;</span> elem <span class="token operator">!=</span> <span class="token string">'.'</span><span class="token punctuation">;</span>
+              <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">if</span><span class="token punctuation">(</span>srcArray<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span>
+                srcArray<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              src <span class="token operator">=</span> srcArray<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'src'</span><span class="token punctuation">,</span> config<span class="token punctuation">.</span>root <span class="token operator">+</span> link <span class="token operator">+</span> src<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              console<span class="token punctuation">.</span>info<span class="token operator">&amp;&amp;</span>console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"update link as:-->"</span><span class="token operator">+</span>config<span class="token punctuation">.</span>root <span class="token operator">+</span> link <span class="token operator">+</span> src<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token keyword">else</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span>info<span class="token operator">&amp;&amp;</span>console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"no src attr, skipped..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span>info<span class="token operator">&amp;&amp;</span>console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      data<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> $<span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 
             </div>
             <hr/>
@@ -563,7 +592,7 @@ FROM
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/08/19/sql-zhi-case-when-han-shu/">http://yoursite.com/2020/08/19/sql-zhi-case-when-han-shu/</a>
+                    <a href="http://yoursite.com/2020/08/21/guan-yu-hexo-bo-ke-wen-zhang-tu-pian-zhan-shi-wen-ti/">http://yoursite.com/2020/08/21/guan-yu-hexo-bo-ke-wen-zhang-tu-pian-zhan-shi-wen-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -601,8 +630,8 @@ FROM
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SQL%E8%AF%AD%E5%8F%A5/">
-                                    <span class="chip bg-color">SQL语句</span>
+                                <a href="/tags/%E5%85%B3%E4%BA%8E%E5%9B%BE%E7%89%87%E5%B1%95%E7%A4%BA/">
+                                    <span class="chip bg-color">关于图片展示</span>
                                 </a>
                             
                         </div>
@@ -774,30 +803,66 @@ FROM
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/08/19/mysql-suo-yin/">
+                <a href="/2020/08/23/mac-xia-python-an-zhuang-yu-pei-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="MySQL索引">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="mac下python安装与配置">
                         
-                        <span class="card-title">MySQL索引</span>
+                        <span class="card-title">mac下python安装与配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MySQL索引索引作为最常见的SQL优化手段，其建立对于数据库性能是很重要的，可以大大提高数据库的检索速度、SQL执行效率。
-普通索引创建索引--指定列索引
-create index 索引名称 on 表名(索引列);
-
---添加索引列
-al
+                            
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-23
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Mc1995
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="SQL实现数据行转列">
+                        
+                        <span class="card-title">SQL实现数据行转列</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            数据分析中经典sql面试题，在做数据统计的时候会需要用到行转列，案例如下。
+--建表语句
+CREATE TABLE students(
+ Id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ UserNa
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -816,53 +881,6 @@ al
                     <a href="/tags/SQL%E8%AF%AD%E5%8F%A5/">
                         <span class="chip bg-color">SQL语句</span>
                     </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/08/17/shu-ju-fen-xi-shi-mian-shi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="数据分析师面试">
-                        
-                        <span class="card-title">数据分析师面试</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            数据分析理论书籍推荐《数据分析：企业的贤内助》，书中通过故事场景搭建，来讲述数据分析的一些基本概念及对企业的帮助，相比枯燥的理论书籍，对入门者更友好一些。
-1、数据分析的目的或者作用套用哆啦A梦的4个宝贝：
-行为预见镜——帮助企业识别机会、
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
-                                    数据分析
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
                     
                     <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
                         <span class="chip bg-color">面试题</span>

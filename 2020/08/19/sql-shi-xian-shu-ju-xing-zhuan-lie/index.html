@@ -503,9 +503,9 @@ INSERT INTO students(UserName,Subject,Source) VALUES  ('王五','语文',68);
 INSERT INTO students(UserName,Subject,Source) VALUES  ('李四','语文',80);
 INSERT INTO students(UserName,Subject,Source) VALUES  ('张三','英语',65);</code></pre>
 <p>表结构与数据如下</p>
-<p><img src="/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/mc/blog/source/_posts/image-20200819200534591.png" alt="image-20200819200534591"></p>
+<p><img src="/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/image-20200819200534591.png" alt="表结构"></p>
 <p>需要实现如下查询结果：</p>
-<p><img src="/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/mc/blog/source/_posts/image-20200819200648860.png" alt="image-20200819200648860"></p>
+<p><img src="/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/image-20200819200648860.png" alt="实现效果"></p>
 <p><strong>实现如下：</strong>使用case when实现静态行专列</p>
 <pre class=" language-mysql"><code class="language-mysql">--case1
 SELECT
@@ -765,56 +765,49 @@ GROUP BY
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/08/19/sql-shi-xian-shu-ju-xing-zhuan-lie/">
+                <a href="/2020/08/21/guan-yu-hexo-bo-ke-wen-zhang-tu-pian-zhan-shi-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="SQL实现数据行转列">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="关于hexo博客文章图片展示问题">
                         
-                        <span class="card-title">SQL实现数据行转列</span>
+                        <span class="card-title">关于hexo博客文章图片展示问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据分析中经典sql面试题，在做数据统计的时候会需要用到行转列，案例如下。
---建表语句
-CREATE TABLE students(
- Id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
- UserNa
+                            博客搭建完成后，在编写博文的过程中，发现需要插入的图片在上传到服务端后不展示，经过一番百度、研究、探索，得出如下解决办法。
+更改配置文件在博客根目录下，更改配置参数；
+post_asset_folder: true
+#表示开始使用本地静态资
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-19
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-21
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
-                                    数据分析
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    博客搭建
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SQL%E8%AF%AD%E5%8F%A5/">
-                        <span class="chip bg-color">SQL语句</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                        <span class="chip bg-color">面试题</span>
+                    <a href="/tags/%E5%85%B3%E4%BA%8E%E5%9B%BE%E7%89%87%E5%B1%95%E7%A4%BA/">
+                        <span class="chip bg-color">关于图片展示</span>
                     </a>
                     
                 </div>
@@ -1073,7 +1066,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.6k</span>&nbsp;字
+                class="white-color">7.4k</span>&nbsp;字
             
             
             
