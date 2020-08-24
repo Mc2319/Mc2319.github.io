@@ -534,7 +534,7 @@ COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
 </code></pre>
-<h3 id="查询数据列"><a href="#查询数据列" class="headerlink" title="查询数据列"></a>查询数据列</h3><h5 id="1-单列查询"><a href="#1-单列查询" class="headerlink" title="1.单列查询"></a>1.单列查询</h5><pre class=" language-mysql"><code class="language-mysql">#查询语句
+<h4 id="查询数据列"><a href="#查询数据列" class="headerlink" title="查询数据列"></a>查询数据列</h4><h5 id="1-单列查询"><a href="#1-单列查询" class="headerlink" title="1.单列查询"></a>1.单列查询</h5><pre class=" language-mysql"><code class="language-mysql">#查询语句
 SELECT 列名 FROM 表名;
 
 #实例
@@ -652,7 +652,7 @@ SELECT * FROM students LIMIT 1,7;</code></pre>
 <li>执行顺序</li>
 </ul>
 <pre class=" language-mysql"><code class="language-mysql">FROM > WHERE > GROUP BY > HAVING > SELECT 的字段 > DISTINCT > ORDER BY > LIMIT</code></pre>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h5 id="1-SELECT执行原理"><a href="#1-SELECT执行原理" class="headerlink" title="1.SELECT执行原理"></a>1.SELECT执行原理</h5><ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><h5 id="1-SELECT执行原理"><a href="#1-SELECT执行原理" class="headerlink" title="1.SELECT执行原理"></a>1.SELECT执行原理</h5><ul>
 <li><p>先从 FROM 这一步开始执行。在这个阶段，如果是多张表联查，还会经历下面的几个步骤：</p>
 <ul>
 <li>首先先通过 CROSS JOIN 求笛卡尔积，相当于得到虚拟表 vt（virtual table）1_1；</li>
