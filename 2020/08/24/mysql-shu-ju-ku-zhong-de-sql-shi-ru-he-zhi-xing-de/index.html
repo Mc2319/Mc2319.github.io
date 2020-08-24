@@ -428,12 +428,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/MySQL/">
+                                <span class="chip bg-color">MySQL</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
+                                数据分析
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -451,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    680
                 </div>
                 
 
@@ -468,7 +481,33 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>MySQL是一种C/S架构的数据库，即Client/Server架构，服务端程序使用的mysqld，MySQL流程图如下：</p>
+<p><img src="/2020/08/24/mysql-shu-ju-ku-zhong-de-sql-shi-ru-he-zhi-xing-de/MySQL%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="MySQL流程图"></p>
+<p>mysqld主要由三层组成：</p>
+<ul>
+<li><strong>连接层</strong>：户端与服务端建立连接，客户端发送SQL至服务端；</li>
+<li><strong>SQL层</strong>：对SQL语句进行查询处理；</li>
+<li><strong>存储引擎层</strong>：与数据库文件打交道，负责数据的存储和读取</li>
+</ul>
+<p>其中，SQL层结构如下：</p>
+<p><img src="/2020/08/24/mysql-shu-ju-ku-zhong-de-sql-shi-ru-he-zhi-xing-de/SQL%E5%B1%82%E7%BB%93%E6%9E%84.jpg" alt="SQL层结构"></p>
+<ul>
+<li><strong>缓存查询</strong>：由于查询效率太低，MySQL8.0之后就不再有该功能。主要是在缓存中查询是否存在SQL语句，如果存在，则直接返回给客户端。</li>
+<li><strong>解析器</strong>：对SQL语句进行语法分析、语义分析。</li>
+<li><strong>优化器</strong>：确定SQL的执行路径（全表检索、索引检索等）。</li>
+<li><strong>执行器</strong>：判断用户是否具备权限，如果具备权限就执行SQL语句并返回查询结果。在MySQL8.0之前的版本，如果设置了缓存查询，会将查询结果进行缓存。</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>SQL 语句在 MySQL 中的流程是：<strong>SQL 语句→缓存查询→解析器→优化器→执行器</strong>。在一部分中，MySQL 和 Oracle 执行 SQL 的原理是一样的。</p>
+<p>与 Oracle 不同的是，MySQL 的存储引擎采用了插件的形式，每个存储引擎都面向一种特定的数据库应用环境。同时开源的 MySQL 还允许开发人员设置自己的存储引擎，下面是一些常见的存储引擎：</p>
+<ol>
+<li>InnoDB 存储引擎：它是 MySQL 5.5 版本之后默认的存储引擎，最大的特点是支持事务、行级锁定、外键约束等。</li>
+<li>MyISAM 存储引擎：在 MySQL 5.5 版本之前是默认的存储引擎，不支持事务，也不支持外键，最大的特点是速度快，占用资源少。</li>
+<li>Memory 存储引擎：使用系统内存作为存储介质，以便得到更快的响应速度。不过如果 mysqld 进程崩溃，则会导致所有的数据丢失，因此我们只有当数据是临时的情况下才使用 Memory 存储引擎。</li>
+<li>NDB 存储引擎：也叫做 NDB Cluster 存储引擎，主要用于 MySQL Cluster 分布式集群环境，类似于 Oracle 的 RAC 集群。</li>
+<li>Archive 存储引擎：它有很好的压缩机制，用于文件归档，在请求写入时会进行压缩，所以也经常用来做仓库。</li>
+</ol>
+<p>需要注意的是，数据库的设计在于表的设计，而在 MySQL 中每个表的设计都可以采用不同的存储引擎，我们可以根据实际的数据处理需要来选择存储引擎，这也是 MySQL 的强大之处。</p>
+
             </div>
             <hr/>
 
@@ -530,7 +569,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/MySQL/">
+                                    <span class="chip bg-color">MySQL</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -713,7 +756,12 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            MySQL是一种C/S架构的数据库，即Client/Server架构，服务端程序使用的mysqld，MySQL流程图如下：
+
+mysqld主要由三层组成：
+
+连接层：户端与服务端建立连接，客户端发送SQL至服务端；
+SQL层：对SQL语句进
                         
                     </div>
                     <div class="publish-info">
@@ -722,13 +770,25 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Mc1995
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
+                                    数据分析
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -984,7 +1044,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.8k</span>&nbsp;字
+                class="white-color">10.4k</span>&nbsp;字
             
             
             
