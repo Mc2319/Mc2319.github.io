@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1k
+                    1.3k
                 </div>
                 
 
@@ -520,7 +520,15 @@
 <p><strong>数据持久层（Data Persistence）</strong></p>
 <p>存储书签、工具栏设置、Cookie、安全证书等数据在硬盘上。</p>
 <h1 id="三-工作原理"><a href="#三-工作原理" class="headerlink" title="三.工作原理"></a>三.工作原理</h1><p>浏览器工作流程图（Chrome浏览器为例）</p>
+<p><img src="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="image-20200904172238967"></p>
 <p>1.当你在浏览器地址栏输入内容时，浏览器进程中的UI线程会根据你输入的内容，判断你输入的内容是网址还是关键词，如果输入网址，则会启动网络线程进行网址访问相关操作，如果是一串关键词，则通过浏览器设置好的默认搜索引擎进行搜索。</p>
+<p>2.浏览器进程中的网络线程请求获取到HTML数据后，通过IPC将数据传给渲染器进程的主线程，主线程将HTML解析构造DOM树；</p>
+<p>3.进行样式计算；</p>
+<p>4.根据DOM树和生成好的样式生成layout Tree，通过遍历Layout Tree生成绘制顺序表，然后遍历Layout Tree生成Layer Tree；</p>
+<p>5.将Layer Tree和绘制顺序信息一起传给合成器线程；</p>
+<p>6.合成器线程生成图块并传给栅格线程进行栅格化；</p>
+<p>7.栅格化完成后，合成器线程会获得栅格化线程传来的“draw quads”图块信息，根据这些信息，合成器线程合成一个合成器帧；</p>
+<p>8.通过IPC将生成的合成器帧传递给给浏览器进程，浏览器再传到GPU进行渲染，最后展示在屏幕上。</p>
 <h1 id="四-附录"><a href="#四-附录" class="headerlink" title="四.附录"></a>四.附录</h1><h4 id="1-进程与线程"><a href="#1-进程与线程" class="headerlink" title="1.进程与线程"></a>1.进程与线程</h4><ul>
 <li><strong>进程</strong>是操作系统进行资源分配和调度的基本单元，可以申请和拥有计算机资源，进程是程序的基本执行实体。<strong>线程</strong>是操作系统能够运算调度的最小单位，一个进程中可以并发多个线程，每条线程并行执行不同的任务。</li>
 </ul>
@@ -1104,7 +1112,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.1k</span>&nbsp;字
+                class="white-color">13.4k</span>&nbsp;字
             
             
             
