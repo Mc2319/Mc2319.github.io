@@ -4,6 +4,69 @@
   
     
     <entry>
+      <title>前端推荐资料</title>
+      <link href="/2020/09/02/qian-duan-tui-jian-zi-liao/"/>
+      <url>/2020/09/02/qian-duan-tui-jian-zi-liao/</url>
+      
+        <content type="html"><![CDATA[<p>持续更新。。。</p><h1 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站"></a>学习网站</h1><p><a href="https://jquery.cuishifeng.cn/">jQuery API中文文档</a></p><p><a href="http://www.yanhuangxueyuan.com/">Three.js技术博客</a></p><p><a href="https://codepen.io/">codepen前端特效网站</a></p><p><a href="https://cn.vuejs.org/">Vue官方网站</a></p><p><a href="https://segmentfault.com/">思否segmentfault问答社区</a></p><p><a href="http://flukeout.github.io/#">CSS Diner选择器练习</a></p><h1 id="素材网站"><a href="#素材网站" class="headerlink" title="素材网站"></a>素材网站</h1><h4 id="色彩网站"><a href="#色彩网站" class="headerlink" title="色彩网站"></a>色彩网站</h4><p><a href="https://www.webdesignrankings.com/resources/lolcolors/">LOLCOLORS前端颜色选取</a></p><p><a href="https://flatuicolors.com/">FLAT UI COLORS2</a></p><p><a href="http://zhongguose.com/">中国色</a></p><p><a href="https://colorhunt.co/">colorhunt色彩狩猎</a></p><h4 id="图标库"><a href="#图标库" class="headerlink" title="图标库"></a>图标库</h4><p><a href="http://www.fontawesome.com.cn/icons-ui/">The Icons图标库</a></p><p><a href="https://www.iconfont.cn/">阿里巴巴矢量图标库</a></p><p><a href="https://www.easyicon.net/">easyicon图标库</a></p><h4 id="图片素材库"><a href="#图片素材库" class="headerlink" title="图片素材库"></a>图片素材库</h4><p><a href="https://wallhere.com/zh/user/14286?__cf_chl_jschl_tk__=4a2cb0f3411000b477c1f5bfe7739f0d5d221d0e-1599061991-0-ARfYnJw2LrNSuyKZwyuTAJVkYBMSF89eHR3J30MWn_7-5_Wnb6oH0wHXAU-PvvC-kiW8vUdWVQDq8srXoHiOXMhNiP-81JF_d6S7INiusvV_Vm2G2Dvxf9rYJXyc4o3fhHlemXuhUxQ8lg2HItv40vr7KJsn731qgZjjDjTht5WDUXVCPiLbLn9ola6u6iXioe92BF2gA3_B4ler70W_c6VDVWADvEzRFDnws396IFzc8QYgPS59KjTcGIRK8w7dz7FEckRsRHgKN6s55DEIlBcMjgttTW2APYiHZVKrjhNKQrWM8-hXeVGQ9Su95k8-IlEGTFT_pVKCzZ7IIaEPpG9XwOTstq2Su1PklF3jDY-c">wallhaven壁纸站</a></p><p><a href="https://www.pexels.com/zh-cn/">Pexels图片素材库</a></p><p><a href="https://picsum.photos/">Lorem Picsum</a></p><h4 id="音效库"><a href="#音效库" class="headerlink" title="音效库"></a>音效库</h4><p><a href="http://www.aigei.com/">爱给音效素材库</a></p><h1 id="工具库"><a href="#工具库" class="headerlink" title="工具库"></a>工具库</h1><p><a href="https://tool.oschina.net/jscompress">JS/CSS/HTML代码在线压缩</a></p><p><a href="http://hiwenku.com/">嗨文库百度文档下载</a></p><p><a href="https://www.toolnb.com/">爱资料在线工具</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端资料 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vue环境安装配置</title>
+      <link href="/2020/08/28/vue-huan-jing-an-zhuang-pei-zhi/"/>
+      <url>/2020/08/28/vue-huan-jing-an-zhuang-pei-zhi/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>前端学习笔记</title>
+      <link href="/2020/08/27/qian-duan-xue-xi-bi-ji/"/>
+      <url>/2020/08/27/qian-duan-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、HTML"><a href="#一、HTML" class="headerlink" title="一、HTML"></a>一、HTML</h1><h2 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h2><ul><li>HTML（全称HyperText Mark-up Language），是一种标识性语言，非编程语言，不能使用逻辑运算。是通过标签将网络上的文档进行统一，使分散的网络资源链接成为一个逻辑整体。</li><li>超文本：是一种组织信息的方式，通过超级链接将图片、视频、文字等多种媒介关联起来。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MySQL数据库中的SQL是如何执行的</title>
       <link href="/2020/08/24/mysql-shu-ju-ku-zhong-de-sql-shi-ru-he-zhi-xing-de/"/>
       <url>/2020/08/24/mysql-shu-ju-ku-zhong-de-sql-shi-ru-he-zhi-xing-de/</url>
@@ -415,6 +478,83 @@
             <tag> MySQL </tag>
             
             <tag> SQL语句 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vue之CLI</title>
+      <link href="/2020/03/29/vue-zhi-cli/"/>
+      <url>/2020/03/29/vue-zhi-cli/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一-前言"><a href="#一-前言" class="headerlink" title="一.前言"></a>一.前言</h1><p>无论学习使用任何框架、技术，阅读<strong>官方文档</strong>都是第一选择<a href="https://cli.vuejs.org/zh/">Vue.js官网</a>。</p><p>Vue.js的构建工具Vue-cli，加上Vue-router、Vuex、Vue-resource，就是注明的Vue.js全家桶系列，共同构成了一个完成的Vue项目的核心。</p><h1 id="二-安装使用"><a href="#二-安装使用" class="headerlink" title="二.安装使用"></a>二.安装使用</h1><h4 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h4><p>使用npm命令安装</p><pre class=" language-sh"><code class="language-sh">#全局安装vue-clinpm install -g @vue/cli#oryarn global add @vue/cli#升级版本npm i -g @vue/cli</code></pre><p>安装完成后查看版本号，不报错即表示安装成功：</p><pre class=" language-sh"><code class="language-sh">vue -V #此处V大写</code></pre><p>关于webpack配置分析，请见<a href="https://segmentfault.com/a/1190000008644830">链接</a></p><p>由于<code>Vue-cli3</code>之后创建的时候并不会自动创建<code>vue.config.js</code>，一般都是需要更改webpack配置的时候手动创建。</p><p>官网有关于审查webpack config的命令，需要可以使用<a href="https://cli.vuejs.org/zh/guide/webpack.html#%E5%AE%A1%E6%9F%A5%E9%A1%B9%E7%9B%AE%E7%9A%84-webpack-%E9%85%8D%E7%BD%AE">审查项目的 webpack 配置</a></p><h4 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h4><h5 id="创建hello-world项目"><a href="#创建hello-world项目" class="headerlink" title="创建hello world项目"></a>创建<strong>hello world</strong>项目</h5><pre class=" language-sh"><code class="language-sh">vue create hello-world#orvue ui</code></pre><p>按照提示选择配置项，此处需要注意的事，会提示你输入项目名称，直接回车表示使用默认项目名称，如要自己命名，需要注意项目名称<strong>不要使用大写</strong>，否则会报错<code>Sorry, name can no longer contain capital letters</code>看到下图即表示完成创建：</p><img src="/2020/03/29/vue-zhi-cli/QQ20200829-171400@2x.png" alt="创建成功" style="zoom:50%;"><h5 id="进入项目文件夹"><a href="#进入项目文件夹" class="headerlink" title="进入项目文件夹"></a>进入项目文件夹</h5><pre class=" language-sh"><code class="language-sh">cd hello #项目名称</code></pre><h5 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h5><pre class=" language-sh"><code class="language-sh">npm run serve</code></pre><p>在浏览器中访问<strong>8080</strong>端口，看到如下画面表示成功：</p><img src="/2020/03/29/vue-zhi-cli/%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E6%88%90%E5%8A%9F.png" alt="启动服务成功" style="zoom:50%;"><p>如无法看到该页面，可能是本地的8080端口被占用，修改配置文件中端口号即可。</p><h4 id="3-部署"><a href="#3-部署" class="headerlink" title="3.部署"></a>3.部署</h4><p>构建项目</p><pre class=" language-sh"><code class="language-sh">npm run build </code></pre><h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><p>新建项目后目录中文件及文件夹代表的意思</p><table><thead><tr><th>文件名称</th><th>作用</th></tr></thead><tbody><tr><td>node_modules文件夹</td><td>项目所依赖的node包文件</td></tr><tr><td>bulid文件夹</td><td>脚本目录，对webpack开发和打包的相关设置，入口文件、输出文件、使用模块等</td></tr><tr><td>src文件夹</td><td>源码文件夹，也是后续主要操作文件夹</td></tr><tr><td>src/assets文件夹</td><td>资源目录</td></tr><tr><td>src/components文件夹</td><td>组件目录</td></tr><tr><td>src/App.vue文件</td><td>页面Vue组件</td></tr><tr><td>src/main.js文件</td><td>页面入口js文件</td></tr><tr><td>package.json文件</td><td>项目描述文件</td></tr><tr><td>public/index.html文件</td><td>入口页面</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue基础 </tag>
+            
+            <tag> 前端框架 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vue之component</title>
+      <link href="/2020/03/28/vue-zhi-component/"/>
+      <url>/2020/03/28/vue-zhi-component/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一-简介"><a href="#一-简介" class="headerlink" title="一.简介"></a>一.简介</h1><p>组件是Vue.js最强大功能之一，可以扩展HTML元素，封装可重用的代码。</p><p>注册组件语法如下</p><pre class=" language-javascript"><code class="language-javascript">Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span>组件名称，配置选项<span class="token punctuation">)</span></code></pre><p>调用组件，在HTML代码中和标签语法类似</p><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>组件名</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>组件名</span><span class="token punctuation">></span></span></code></pre><p>Vue组件 = Vue实例 = new Vue(options)</p><h4 id="1-全局组件"><a href="#1-全局组件" class="headerlink" title="1.全局组件"></a>1.全局组件</h4><p>直接注册组件，该组件所有实例可用。</p><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>  <span class="token operator">&lt;</span>todo<span class="token operator">-</span>item v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"item in groceryList"</span> v<span class="token operator">-</span>bind<span class="token punctuation">:</span>todo<span class="token operator">=</span><span class="token string">"item"</span> v<span class="token operator">-</span>bind<span class="token punctuation">:</span>key<span class="token operator">=</span><span class="token string">"item.id"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>todo<span class="token operator">-</span>item<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token operator">&lt;</span>script<span class="token operator">></span>        <span class="token comment" spellcheck="true">// 组件定义</span>        Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'todo-item'</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>            props<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'todo'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>            template<span class="token punctuation">:</span> <span class="token string">'&lt;li class="text">&amp;#123;&amp;#123;todo.text&amp;#125;&amp;#125;&lt;/li>'</span>        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>                <span class="token comment" spellcheck="true">//创建实例</span>        <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>            el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>            data<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>                message<span class="token punctuation">:</span> <span class="token string">'hello vue!'</span><span class="token punctuation">,</span>                groceryList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>                    id <span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span>                    text<span class="token punctuation">:</span> <span class="token string">"蔬菜"</span>                    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>                        id<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>                        text<span class="token punctuation">:</span> <span class="token string">"奶酪"</span>                    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>                        id<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>                        text<span class="token punctuation">:</span> <span class="token string">"随便其他人吃什么"</span>                    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">]</span>            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre><p>输出结果为</p><pre><code>hello vue!    1.蔬菜    2.奶酪    3.随便其他人吃什么</code></pre><h4 id="2-局部组件"><a href="#2-局部组件" class="headerlink" title="2.局部组件"></a>2.局部组件</h4><p>在实例中注册组件，组件只能在该实例中使用</p><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>     <span class="token operator">&lt;</span>todo<span class="token operator">-</span>test<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>todo<span class="token operator">-</span>test<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token operator">&lt;</span>script<span class="token operator">></span>        <span class="token keyword">var</span> test <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>          template<span class="token punctuation">:</span> <span class="token string">'&lt;li>hello，Vue!&lt;/li>'</span>        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>        <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>            el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>          <span class="token comment" spellcheck="true">//定义实例局部组件</span>            components<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>              <span class="token string">'todo-test'</span><span class="token punctuation">:</span> test            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre><p>输出结果为：</p><pre><code>hello，Vue!</code></pre><p>Vue组件的<strong>缺点</strong></p><ul><li>全局定义：强制要求每个component中的命名不得重复</li><li>字符串模板：缺乏语法高亮，在HTML有多行时，需要用到\，代码不够整洁</li><li>不支持CSS：CSS会被遗漏</li><li>没有构建步骤：限制只能使用HTML和ES5 JavaScript，而 不能使用预处理器，如Pug（formerly Jade）和Babel</li></ul><p>在实际工作或项目中，更推荐使用<strong>单文件组件</strong>的模式，使用有如下优势</p><ul><li>完整语法高亮</li><li>CommonJS模块</li><li>组件作用域的CSS</li></ul><h1 id="二-组件的组成"><a href="#二-组件的组成" class="headerlink" title="二.组件的组成"></a>二.组件的组成</h1><h4 id="1-属性"><a href="#1-属性" class="headerlink" title="1.属性"></a>1.属性</h4><h5 id="自定义属性props"><a href="#自定义属性props" class="headerlink" title="自定义属性props"></a>自定义属性props</h5><p>组件props中声明的属性，Prop是子组件用来接收父组件传递过来的数据的一个自定义属性，父组件的数据需要通过props把数据传给子组件，子组件需要显式的用props选项声明“prop”</p><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">></span>    <span class="token operator">&lt;</span>todo<span class="token operator">-</span>test message<span class="token operator">=</span><span class="token string">"hello，Vue!"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>todo<span class="token operator">-</span>test<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token operator">&lt;</span>script<span class="token operator">></span>    <span class="token comment" spellcheck="true">//注册全局组件</span>    Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'todo-test'</span> <span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">//声明props属性</span>      props<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'message'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>      template<span class="token punctuation">:</span> <span class="token string">'&lt;span>&amp;#123;&amp;#123;message&amp;#125;&amp;#125;&lt;/span>'</span>    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>    <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>        el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre><p>输出结果为：</p><pre><code>hello，Vue!</code></pre><h5 id="原生属性attrs"><a href="#原生属性attrs" class="headerlink" title="原生属性attrs"></a>原生属性attrs</h5><p>没有声明的熟悉，默认自动挂载到组件根元素上，设置<strong>inheritAttrs</strong>为<strong>false</strong>可以关闭自动挂载</p><h5 id="特殊属性class、style"><a href="#特殊属性class、style" class="headerlink" title="特殊属性class、style"></a>特殊属性class、style</h5><p>挂载到组件根元素上，支持字符串、对象、数组等多种语法</p><h4 id="2-事件"><a href="#2-事件" class="headerlink" title="2.事件"></a>2.事件</h4><h5 id="普通事件"><a href="#普通事件" class="headerlink" title="普通事件"></a>普通事件</h5><p>@click,@input,@change,@xxx等事件，通过<code>this.$emit(&#39;xxx&#39;,...)</code>触发。</p><h5 id="修饰符事件"><a href="#修饰符事件" class="headerlink" title="修饰符事件"></a>修饰符事件</h5><p>@input.trim,@click.stop,@submit.prevent等，一般用于原生HTML元素，自定义元素需要支持的话，需要自行开发支持。</p><h4 id="3-插槽"><a href="#3-插槽" class="headerlink" title="3.插槽"></a>3.插槽</h4><p>插槽分为<strong>普通插槽</strong>和<strong>作用域插槽</strong>，在2.6版本后，底层实现代码已经趋于相同，建议在开发过程中使用新语法进行开发。</p><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//普通插槽</span><span class="token operator">&lt;</span>template slot<span class="token operator">=</span><span class="token string">"XXX"</span><span class="token operator">></span><span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>   <span class="token comment" spellcheck="true">//2.5版本</span><span class="token operator">&lt;</span>template v<span class="token operator">-</span>slot<span class="token punctuation">:</span>XXX<span class="token operator">></span><span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>   <span class="token comment" spellcheck="true">//2.6版本</span><span class="token comment" spellcheck="true">//作用域插槽</span><span class="token operator">&lt;</span>template slot<span class="token operator">=</span><span class="token string">"XXX"</span> slot<span class="token operator">-</span>scope<span class="token operator">=</span><span class="token string">"props"</span><span class="token operator">></span><span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>   <span class="token comment" spellcheck="true">//2.5版本</span><span class="token operator">&lt;</span>template v<span class="token operator">-</span>slot<span class="token punctuation">:</span>XXX<span class="token operator">=</span><span class="token string">"props"</span><span class="token operator">></span><span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>   <span class="token comment" spellcheck="true">//2.6版本</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue框架 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>浏览器的工作原理</title>
+      <link href="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/"/>
+      <url>/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/</url>
+      
+        <content type="html"><![CDATA[<p>本文只是个人学习心得总结，更详细的讲解可点击链接查看：<a href="https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/">新式浏览器的幕后揭秘</a></p><h1 id="一-浏览器历史"><a href="#一-浏览器历史" class="headerlink" title="一.浏览器历史"></a>一.浏览器历史</h1><ul><li>1991年，第一代网络浏览器WorldWideWeb</li><li>1993年，Mosaic，支持同时显示文本和图片</li><li>1994年，网景浏览器（Netscape Navigator），第一款商用浏览器，支持静态HTML，同年浏览器opera发布</li><li>1995年，微软发布IE浏览器，开始与网景的浏览器竞争，打响第一次浏览器大战</li><li>1996年，发布IE3.0，同时绑定Windows操作系统，网景占据主要市场</li><li>1998年，网景公司成立Mozilla基金会，并准备开发全新浏览器（Firefox）</li><li>1999年，由于IE浏览器的天生优势，市场份额不断提高至99%，第一次浏览器大战以微软胜利结束</li><li>2003年，苹果发布Safari浏览器</li><li>2004年，Mozilla发布火狐（Firefox）浏览器，搭配全新内核Gecko，支持用户拓展，市场份额稳步上升</li><li>2005年，苹果公司开源Safari浏览器内核webkit</li><li>2008年，谷歌（Chromium）浏览器发布，基于webkit内核</li><li>2010年，苹果发布Webkit2，改为多进程的结构模型</li><li>2013年，Google宣布全新内核项目——Blink</li><li>2015年，微软发布全新Edge浏览器，IE浏览器逐步退出舞台</li><li>2017年，Mozilla退出Quantum版本的Firefox浏览器</li><li>2019年，微软发布全新的Edge，支持插件使用，较上一代Edge浏览器有了较大提升</li></ul><h1 id="二-浏览器的组成"><a href="#二-浏览器的组成" class="headerlink" title="二.浏览器的组成"></a>二.浏览器的组成</h1><p>简单来说，浏览器是由用户界面+渲染引擎+浏览器引擎构成，其中渲染引擎又作为浏览器的核心。如图：</p><img src="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9E%84%E6%88%90.png" alt="浏览器结构图" style="zoom:50%;"><p><strong>用户界面（User Interface）</strong></p><p>工具栏、菜单栏、交互按钮等。</p><p><strong>浏览器引擎（Browser Engine）</strong></p><p>浏览器引擎是一个可嵌入组件，为渲染引擎提供高级接口；可以加载一个给定的URL，支持浏览器的诸多操作。</p><p><strong>渲染引擎（Rendering Engine）</strong></p><p>也就是俗称的内核，是浏览器的核心，内部包含HTML解析器，可以准确计算页面布局，显示HTML和XML文档，可以选择CSS样式，以及嵌入式内容。</p><p><strong>网络（Networking）</strong></p><p>实现HTTP和FTP等文件传输协议。</p><p><strong>JavaScript解释器（JavaScript Interpreter）</strong></p><p>解释并执行嵌入网页的JS代码（ECMAScript），并通过DOM接口和CSSOM接口来修改网页内容、样式规则，从而改变渲染结果。</p><p><strong>XML解析器（XML Parser）</strong></p><p>XML解析器可以将XML文档解析成文档对象模型（DOM）树。</p><p><strong>显示后端（Display Backend）</strong></p><p>提供绘图和窗口原语，包括用户界面控件集合、字体集合。</p><p><strong>数据持久层（Data Persistence）</strong></p><p>存储书签、工具栏设置、Cookie、安全证书等数据在硬盘上。</p><h1 id="三-工作原理"><a href="#三-工作原理" class="headerlink" title="三.工作原理"></a>三.工作原理</h1><p>浏览器工作流程图（Chrome浏览器为例）</p><p>1.当你在浏览器地址栏输入内容时，浏览器进程中的UI线程会根据你输入的内容，判断你输入的内容是网址还是关键词，如果输入网址，则会启动网络线程进行网址访问相关操作，如果是一串关键词，则通过浏览器设置好的默认搜索引擎进行搜索。</p><h1 id="四-附录"><a href="#四-附录" class="headerlink" title="四.附录"></a>四.附录</h1><h4 id="1-进程与线程"><a href="#1-进程与线程" class="headerlink" title="1.进程与线程"></a>1.进程与线程</h4><ul><li><strong>进程</strong>是操作系统进行资源分配和调度的基本单元，可以申请和拥有计算机资源，进程是程序的基本执行实体。<strong>线程</strong>是操作系统能够运算调度的最小单位，一个进程中可以并发多个线程，每条线程并行执行不同的任务。</li></ul><img src="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/emm.jpg" alt="听不懂.jpg" style="zoom:75%;"><p>个人推荐看阮一峰大佬的博客：<a href="https://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html">进程与线程的解释</a></p><h4 id="2-当前常见浏览器及其内核版本"><a href="#2-当前常见浏览器及其内核版本" class="headerlink" title="2.当前常见浏览器及其内核版本"></a>2.当前常见浏览器及其内核版本</h4><table><thead><tr><th align="center">浏览器名称</th><th align="center">内核版本</th></tr></thead><tbody><tr><td align="center">IE浏览器</td><td align="center">Trident内核（IE内核）</td></tr><tr><td align="center">Chrome浏览器</td><td align="center">Blink内核</td></tr><tr><td align="center">Firefox浏览器</td><td align="center">Gecko内核（Firefox内核）</td></tr><tr><td align="center">Safari浏览器</td><td align="center">Webkit内核</td></tr><tr><td align="center">Opera浏览器</td><td align="center">Blink内核</td></tr><tr><td align="center">360、猎豹、2345浏览器</td><td align="center">IE+Chrome双内核</td></tr><tr><td align="center">搜狗、QQ浏览器</td><td align="center">兼容模式下Trident+高速模式下Webkit</td></tr><tr><td align="center">百度浏览器</td><td align="center">Trident内核</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 浏览器原理 </tag>
             
         </tags>
       
