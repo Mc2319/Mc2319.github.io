@@ -520,7 +520,7 @@
 <p><strong>数据持久层（Data Persistence）</strong></p>
 <p>存储书签、工具栏设置、Cookie、安全证书等数据在硬盘上。</p>
 <h1 id="三-工作原理"><a href="#三-工作原理" class="headerlink" title="三.工作原理"></a>三.工作原理</h1><p>浏览器工作流程图（Chrome浏览器为例）</p>
-<p><img src="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="image-20200904172238967"></p>
+<p><img src="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="浏览器工作流程图"></p>
 <p>1.当你在浏览器地址栏输入内容时，浏览器进程中的UI线程会根据你输入的内容，判断你输入的内容是网址还是关键词，如果输入网址，则会启动网络线程进行网址访问相关操作，如果是一串关键词，则通过浏览器设置好的默认搜索引擎进行搜索。</p>
 <p>2.浏览器进程中的网络线程请求获取到HTML数据后，通过IPC将数据传给渲染器进程的主线程，主线程将HTML解析构造DOM树；</p>
 <p>3.进行样式计算；</p>
