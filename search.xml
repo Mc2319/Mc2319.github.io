@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>谷歌字体引用报错err_ssl_protocol_error</title>
+      <link href="/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/"/>
+      <url>/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一-谷歌字体库字体的使用"><a href="#一-谷歌字体库字体的使用" class="headerlink" title="一.谷歌字体库字体的使用"></a>一.谷歌字体库字体的使用</h1><p>在学习过程中，在一个HTML中引入了谷歌字体，通过如下方式引入：</p><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/css?family<span class="token punctuation">=</span>Lobster<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre><p>在CSS中调用后，发现浏览器报错：</p><img src="/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/%E6%8A%A5%E9%94%99%E4%BB%A3%E7%A0%81.png" alt="报错信息" style="zoom:50%;"><p>经过验证发现<code>fonts.googleapis.com</code>服务已经挂掉，经过一番测试，发现正确的引入方式</p><p>1.访问<a href="http://www.googlefonts.net/">Google Fonts中国</a></p><p>2.找到自己所需的字体，加入字体库，在<strong>嵌入</strong>菜单中复制引入代码</p><img src="/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/%E5%BC%95%E5%85%A5%E4%BB%A3%E7%A0%81.png" alt="引入代码" style="zoom:50%;"><p>3.按照CSS样式制定规则，使用即可。</p><h1 id="二-存在问题"><a href="#二-存在问题" class="headerlink" title="二.存在问题"></a>二.存在问题</h1><p>在引入成功后，发现有时网页打开速度较慢，经过对页面加载项分析，发现字体引用占用了大量的时间。为保障页面加载速度，可以将字体库字体本地化。网上也提出可以把链接指向360的公共库，但是本人测试并不可行，有兴趣可以自行尝试。</p><h4 id="本地化教程"><a href="#本地化教程" class="headerlink" title="本地化教程"></a>本地化教程</h4><h5 id="1-复制link标签中指向的链接，在浏览器打开，此时看到的就是一个css文件的内容，如图所示："><a href="#1-复制link标签中指向的链接，在浏览器打开，此时看到的就是一个css文件的内容，如图所示：" class="headerlink" title="1.复制link标签中指向的链接，在浏览器打开，此时看到的就是一个css文件的内容，如图所示："></a>1.复制<code>link</code>标签中指向的链接，在浏览器打开，此时看到的就是一个css文件的内容，如图所示：</h5><img src="/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/%E9%83%A8%E5%88%86%E4%BB%A3%E7%A0%81%E6%88%AA%E5%9B%BE.png" alt="部分代码" style="zoom:50%;"><h5 id="2-在项目的CSS文件夹内新建一个css文件，将代码复制保存，在HTML文件中引用该css文件。"><a href="#2-在项目的CSS文件夹内新建一个css文件，将代码复制保存，在HTML文件中引用该css文件。" class="headerlink" title="2.在项目的CSS文件夹内新建一个css文件，将代码复制保存，在HTML文件中引用该css文件。"></a>2.在项目的CSS文件夹内新建一个css文件，将代码复制保存，在HTML文件中引用该css文件。</h5><h5 id="3-复制代码中url项，在浏览器中代开，按照提示操作下载字体文件，并将下载的字体文件保存在项目文件夹中。"><a href="#3-复制代码中url项，在浏览器中代开，按照提示操作下载字体文件，并将下载的字体文件保存在项目文件夹中。" class="headerlink" title="3.复制代码中url项，在浏览器中代开，按照提示操作下载字体文件，并将下载的字体文件保存在项目文件夹中。"></a>3.复制代码中<strong>url</strong>项，在浏览器中代开，按照提示操作下载字体文件，并将下载的字体文件保存在项目文件夹中。</h5><img src="/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/url%E5%9C%B0%E5%9D%80.png" alt="url地址" style="zoom:50%;"><h5 id="4-替换CSS文件中的url内容，将其更换为绝对路径引入。"><a href="#4-替换CSS文件中的url内容，将其更换为绝对路径引入。" class="headerlink" title="4.替换CSS文件中的url内容，将其更换为绝对路径引入。"></a>4.替换CSS文件中的<strong>url</strong>内容，将其更换为绝对路径引入。</h5><p>通过上面的方法，可以从本地访问谷歌字体库，页面加载效率将大大提升。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> error </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前端推荐资料</title>
       <link href="/2020/09/02/qian-duan-tui-jian-zi-liao/"/>
       <url>/2020/09/02/qian-duan-tui-jian-zi-liao/</url>
       
-        <content type="html"><![CDATA[<p>持续更新。。。</p><h1 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站"></a>学习网站</h1><p><a href="https://jquery.cuishifeng.cn/">jQuery API中文文档</a></p><p><a href="http://www.yanhuangxueyuan.com/">Three.js技术博客</a></p><p><a href="https://codepen.io/">codepen前端特效网站</a></p><p><a href="https://cn.vuejs.org/">Vue官方网站</a></p><p><a href="https://segmentfault.com/">思否segmentfault问答社区</a></p><p><a href="http://flukeout.github.io/#">CSS Diner选择器练习</a></p><h1 id="素材网站"><a href="#素材网站" class="headerlink" title="素材网站"></a>素材网站</h1><h4 id="色彩网站"><a href="#色彩网站" class="headerlink" title="色彩网站"></a>色彩网站</h4><p><a href="https://www.webdesignrankings.com/resources/lolcolors/">LOLCOLORS前端颜色选取</a></p><p><a href="https://flatuicolors.com/">FLAT UI COLORS2</a></p><p><a href="http://zhongguose.com/">中国色</a></p><p><a href="https://colorhunt.co/">colorhunt色彩狩猎</a></p><h4 id="图标库"><a href="#图标库" class="headerlink" title="图标库"></a>图标库</h4><p><a href="http://www.fontawesome.com.cn/icons-ui/">The Icons图标库</a></p><p><a href="https://www.iconfont.cn/">阿里巴巴矢量图标库</a></p><p><a href="https://www.easyicon.net/">easyicon图标库</a></p><h4 id="图片素材库"><a href="#图片素材库" class="headerlink" title="图片素材库"></a>图片素材库</h4><p><a href="https://wallhere.com/zh/user/14286?__cf_chl_jschl_tk__=4a2cb0f3411000b477c1f5bfe7739f0d5d221d0e-1599061991-0-ARfYnJw2LrNSuyKZwyuTAJVkYBMSF89eHR3J30MWn_7-5_Wnb6oH0wHXAU-PvvC-kiW8vUdWVQDq8srXoHiOXMhNiP-81JF_d6S7INiusvV_Vm2G2Dvxf9rYJXyc4o3fhHlemXuhUxQ8lg2HItv40vr7KJsn731qgZjjDjTht5WDUXVCPiLbLn9ola6u6iXioe92BF2gA3_B4ler70W_c6VDVWADvEzRFDnws396IFzc8QYgPS59KjTcGIRK8w7dz7FEckRsRHgKN6s55DEIlBcMjgttTW2APYiHZVKrjhNKQrWM8-hXeVGQ9Su95k8-IlEGTFT_pVKCzZ7IIaEPpG9XwOTstq2Su1PklF3jDY-c">wallhaven壁纸站</a></p><p><a href="https://www.pexels.com/zh-cn/">Pexels图片素材库</a></p><p><a href="https://picsum.photos/">Lorem Picsum</a></p><h4 id="音效库"><a href="#音效库" class="headerlink" title="音效库"></a>音效库</h4><p><a href="http://www.aigei.com/">爱给音效素材库</a></p><h1 id="工具库"><a href="#工具库" class="headerlink" title="工具库"></a>工具库</h1><p><a href="https://tool.oschina.net/jscompress">JS/CSS/HTML代码在线压缩</a></p><p><a href="http://hiwenku.com/">嗨文库百度文档下载</a></p><p><a href="https://www.toolnb.com/">爱资料在线工具</a></p>]]></content>
+        <content type="html"><![CDATA[<p>持续更新。。。</p><h1 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站"></a>学习网站</h1><p><a href="https://jquery.cuishifeng.cn/">jQuery API中文文档</a></p><p><a href="http://www.yanhuangxueyuan.com/">Three.js技术博客</a></p><p><a href="https://codepen.io/">codepen前端特效网站</a></p><p><a href="https://cn.vuejs.org/">Vue官方网站</a></p><p><a href="https://segmentfault.com/">思否segmentfault问答社区</a></p><p><a href="http://flukeout.github.io/#">CSS Diner选择器练习</a></p><h1 id="素材网站"><a href="#素材网站" class="headerlink" title="素材网站"></a>素材网站</h1><h4 id="色彩网站"><a href="#色彩网站" class="headerlink" title="色彩网站"></a>色彩网站</h4><p><a href="https://www.webdesignrankings.com/resources/lolcolors/">LOLCOLORS前端颜色选取</a></p><p><a href="https://flatuicolors.com/">FLAT UI COLORS2</a></p><p><a href="http://zhongguose.com/">中国色</a></p><p><a href="https://colorhunt.co/">colorhunt色彩狩猎</a></p><h4 id="图标库"><a href="#图标库" class="headerlink" title="图标库"></a>图标库</h4><p><a href="http://www.fontawesome.com.cn/icons-ui/">The Icons图标库</a></p><p><a href="https://www.iconfont.cn/">阿里巴巴矢量图标库</a></p><p><a href="https://www.easyicon.net/">easyicon图标库</a></p><h4 id="图片素材库"><a href="#图片素材库" class="headerlink" title="图片素材库"></a>图片素材库</h4><p><a href="https://wallhere.com/zh/user/14286?__cf_chl_jschl_tk__=4a2cb0f3411000b477c1f5bfe7739f0d5d221d0e-1599061991-0-ARfYnJw2LrNSuyKZwyuTAJVkYBMSF89eHR3J30MWn_7-5_Wnb6oH0wHXAU-PvvC-kiW8vUdWVQDq8srXoHiOXMhNiP-81JF_d6S7INiusvV_Vm2G2Dvxf9rYJXyc4o3fhHlemXuhUxQ8lg2HItv40vr7KJsn731qgZjjDjTht5WDUXVCPiLbLn9ola6u6iXioe92BF2gA3_B4ler70W_c6VDVWADvEzRFDnws396IFzc8QYgPS59KjTcGIRK8w7dz7FEckRsRHgKN6s55DEIlBcMjgttTW2APYiHZVKrjhNKQrWM8-hXeVGQ9Su95k8-IlEGTFT_pVKCzZ7IIaEPpG9XwOTstq2Su1PklF3jDY-c">wallhaven壁纸站</a></p><p><a href="https://www.pexels.com/zh-cn/">Pexels图片素材库</a></p><p><a href="https://picsum.photos/">Lorem Picsum</a></p><h4 id="音效库"><a href="#音效库" class="headerlink" title="音效库"></a>音效库</h4><p><a href="http://www.aigei.com/">爱给音效素材库</a></p><h4 id="字体库"><a href="#字体库" class="headerlink" title="字体库"></a>字体库</h4><p><a href="http://www.googlefonts.net/">谷歌字体库</a></p><h1 id="工具库"><a href="#工具库" class="headerlink" title="工具库"></a>工具库</h1><p><a href="https://tool.oschina.net/jscompress">JS/CSS/HTML代码在线压缩</a></p><p><a href="http://hiwenku.com/">嗨文库百度文档下载</a></p><p><a href="https://www.toolnb.com/">爱资料在线工具</a></p>]]></content>
       
       
       <categories>
@@ -462,9 +487,34 @@
       
         <tags>
             
+            <tag> MySQL </tag>
+            
             <tag> SQL语句 </tag>
             
-            <tag> MySQL </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JS的四种调用方式</title>
+      <link href="/2020/04/04/js-de-si-chong-diao-yong-fang-shi/"/>
+      <url>/2020/04/04/js-de-si-chong-diao-yong-fang-shi/</url>
+      
+        <content type="html"><![CDATA[<p>JS中函数调用共有4中方式：方法调用模式、函数调用模式、构造器调用模式和apply调用模式。除了声明定义时的形参，每个函数还接收两个附加的参数：this和arguments。</p><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//访问a和b</span>  <span class="token comment" spellcheck="true">//还有this、arguments</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre><h4 id="1-方法调用模式"><a href="#1-方法调用模式" class="headerlink" title="1.方法调用模式"></a>1.方法调用模式</h4><p>函数被保存为对象的一个属性时，称为一个方法。方法被调用时，this被绑定到该对象。</p><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//定义一个对象</span><span class="token keyword">var</span> MyObject <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>  value<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//方法</span>  increment<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>inc<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//方法接受一个可选参数，如果不是数字，默认使用数字1</span>    <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">+</span><span class="token operator">=</span> <span class="token keyword">typeof</span> inc <span class="token operator">===</span> <span class="token string">'number'</span> <span class="token operator">?</span> inc <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>MyObject<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>document<span class="token punctuation">.</span><span class="token function">writeln</span><span class="token punctuation">(</span>MyObject<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//执行结果为1</span>Myobject<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>document<span class="token punctuation">.</span><span class="token function">writeln</span><span class="token punctuation">(</span>MyObject<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//执行结果为3</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JS </tag>
             
         </tags>
       

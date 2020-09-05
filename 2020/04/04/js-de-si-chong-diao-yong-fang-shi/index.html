@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="浏览器的工作原理, coding">
+    <meta name="keywords" content="JS的四种调用方式, coding">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>浏览器的工作原理 | coding</title>
+    <title>JS的四种调用方式 | coding</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">浏览器的工作原理</h1>
+                    <h1 class="description center-align post-title">JS的四种调用方式</h1>
                 </div>
             </div>
         </div>
@@ -430,8 +430,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86/">
-                                <span class="chip bg-color">浏览器原理</span>
+                            <a href="/tags/JS/">
+                                <span class="chip bg-color">JS</span>
                             </a>
                         
                     </div>
@@ -455,7 +455,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-02-29
+                    2020-04-04
                 </div>
                 
 
@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.3k
+                    197
                 </div>
                 
 
@@ -481,100 +481,27 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文只是个人学习心得总结，更详细的讲解可点击链接查看：<a target="_blank" rel="noopener" href="https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/">新式浏览器的幕后揭秘</a></p>
-<h1 id="一-浏览器历史"><a href="#一-浏览器历史" class="headerlink" title="一.浏览器历史"></a>一.浏览器历史</h1><ul>
-<li>1991年，第一代网络浏览器WorldWideWeb</li>
-<li>1993年，Mosaic，支持同时显示文本和图片</li>
-<li>1994年，网景浏览器（Netscape Navigator），第一款商用浏览器，支持静态HTML，同年浏览器opera发布</li>
-<li>1995年，微软发布IE浏览器，开始与网景的浏览器竞争，打响第一次浏览器大战</li>
-<li>1996年，发布IE3.0，同时绑定Windows操作系统，网景占据主要市场</li>
-<li>1998年，网景公司成立Mozilla基金会，并准备开发全新浏览器（Firefox）</li>
-<li>1999年，由于IE浏览器的天生优势，市场份额不断提高至99%，第一次浏览器大战以微软胜利结束</li>
-<li>2003年，苹果发布Safari浏览器</li>
-<li>2004年，Mozilla发布火狐（Firefox）浏览器，搭配全新内核Gecko，支持用户拓展，市场份额稳步上升</li>
-<li>2005年，苹果公司开源Safari浏览器内核webkit</li>
-<li>2008年，谷歌（Chromium）浏览器发布，基于webkit内核</li>
-<li>2010年，苹果发布Webkit2，改为多进程的结构模型</li>
-<li>2013年，Google宣布全新内核项目——Blink</li>
-<li>2015年，微软发布全新Edge浏览器，IE浏览器逐步退出舞台</li>
-<li>2017年，Mozilla退出Quantum版本的Firefox浏览器</li>
-<li>2019年，微软发布全新的Edge，支持插件使用，较上一代Edge浏览器有了较大提升</li>
-</ul>
-<h1 id="二-浏览器的组成"><a href="#二-浏览器的组成" class="headerlink" title="二.浏览器的组成"></a>二.浏览器的组成</h1><p>简单来说，浏览器是由用户界面+渲染引擎+浏览器引擎构成，其中渲染引擎又作为浏览器的核心。如图：</p>
-<img src="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9E%84%E6%88%90.png" alt="浏览器结构图" style="zoom:50%;">
+                <p>JS中函数调用共有4中方式：方法调用模式、函数调用模式、构造器调用模式和apply调用模式。除了声明定义时的形参，每个函数还接收两个附加的参数：this和arguments。</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">//访问a和b</span>
+  <span class="token comment" spellcheck="true">//还有this、arguments</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+<h4 id="1-方法调用模式"><a href="#1-方法调用模式" class="headerlink" title="1.方法调用模式"></a>1.方法调用模式</h4><p>函数被保存为对象的一个属性时，称为一个方法。方法被调用时，this被绑定到该对象。</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">//定义一个对象</span>
+<span class="token keyword">var</span> MyObject <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  value<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">//方法</span>
+  increment<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>inc<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//方法接受一个可选参数，如果不是数字，默认使用数字1</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">+</span><span class="token operator">=</span> <span class="token keyword">typeof</span> inc <span class="token operator">===</span> <span class="token string">'number'</span> <span class="token operator">?</span> inc <span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
 
-<p><strong>用户界面（User Interface）</strong></p>
-<p>工具栏、菜单栏、交互按钮等。</p>
-<p><strong>浏览器引擎（Browser Engine）</strong></p>
-<p>浏览器引擎是一个可嵌入组件，为渲染引擎提供高级接口；可以加载一个给定的URL，支持浏览器的诸多操作。</p>
-<p><strong>渲染引擎（Rendering Engine）</strong></p>
-<p>也就是俗称的内核，是浏览器的核心，内部包含HTML解析器，可以准确计算页面布局，显示HTML和XML文档，可以选择CSS样式，以及嵌入式内容。</p>
-<p><strong>网络（Networking）</strong></p>
-<p>实现HTTP和FTP等文件传输协议。</p>
-<p><strong>JavaScript解释器（JavaScript Interpreter）</strong></p>
-<p>解释并执行嵌入网页的JS代码（ECMAScript），并通过DOM接口和CSSOM接口来修改网页内容、样式规则，从而改变渲染结果。</p>
-<p><strong>XML解析器（XML Parser）</strong></p>
-<p>XML解析器可以将XML文档解析成文档对象模型（DOM）树。</p>
-<p><strong>显示后端（Display Backend）</strong></p>
-<p>提供绘图和窗口原语，包括用户界面控件集合、字体集合。</p>
-<p><strong>数据持久层（Data Persistence）</strong></p>
-<p>存储书签、工具栏设置、Cookie、安全证书等数据在硬盘上。</p>
-<h1 id="三-工作原理"><a href="#三-工作原理" class="headerlink" title="三.工作原理"></a>三.工作原理</h1><p>浏览器工作流程图（Chrome浏览器为例）</p>
-<p><img src="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="浏览器工作流程图"></p>
-<p>1.当你在浏览器地址栏输入内容时，浏览器进程中的UI线程会根据你输入的内容，判断你输入的内容是网址还是关键词，如果输入网址，则会启动网络线程进行网址访问相关操作，如果是一串关键词，则通过浏览器设置好的默认搜索引擎进行搜索。</p>
-<p>2.浏览器进程中的网络线程请求获取到HTML数据后，通过IPC将数据传给渲染器进程的主线程，主线程将HTML解析构造DOM树；</p>
-<p>3.进行样式计算；</p>
-<p>4.根据DOM树和生成好的样式生成layout Tree，通过遍历Layout Tree生成绘制顺序表，然后遍历Layout Tree生成Layer Tree；</p>
-<p>5.将Layer Tree和绘制顺序信息一起传给合成器线程；</p>
-<p>6.合成器线程生成图块并传给栅格线程进行栅格化；</p>
-<p>7.栅格化完成后，合成器线程会获得栅格化线程传来的“draw quads”图块信息，根据这些信息，合成器线程合成一个合成器帧；</p>
-<p>8.通过IPC将生成的合成器帧传递给给浏览器进程，浏览器再传到GPU进行渲染，最后展示在屏幕上。</p>
-<h1 id="四-附录"><a href="#四-附录" class="headerlink" title="四.附录"></a>四.附录</h1><h4 id="1-进程与线程"><a href="#1-进程与线程" class="headerlink" title="1.进程与线程"></a>1.进程与线程</h4><ul>
-<li><strong>进程</strong>是操作系统进行资源分配和调度的基本单元，可以申请和拥有计算机资源，进程是程序的基本执行实体。<strong>线程</strong>是操作系统能够运算调度的最小单位，一个进程中可以并发多个线程，每条线程并行执行不同的任务。</li>
-</ul>
-<img src="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/emm.jpg" alt="听不懂.jpg" style="zoom:75%;">
+MyObject<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">writeln</span><span class="token punctuation">(</span>MyObject<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//执行结果为1</span>
 
-<p>个人推荐看阮一峰大佬的博客：<a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html">进程与线程的解释</a></p>
-<h4 id="2-当前常见浏览器及其内核版本"><a href="#2-当前常见浏览器及其内核版本" class="headerlink" title="2.当前常见浏览器及其内核版本"></a>2.当前常见浏览器及其内核版本</h4><table>
-<thead>
-<tr>
-<th align="center">浏览器名称</th>
-<th align="center">内核版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">IE浏览器</td>
-<td align="center">Trident内核（IE内核）</td>
-</tr>
-<tr>
-<td align="center">Chrome浏览器</td>
-<td align="center">Blink内核</td>
-</tr>
-<tr>
-<td align="center">Firefox浏览器</td>
-<td align="center">Gecko内核（Firefox内核）</td>
-</tr>
-<tr>
-<td align="center">Safari浏览器</td>
-<td align="center">Webkit内核</td>
-</tr>
-<tr>
-<td align="center">Opera浏览器</td>
-<td align="center">Blink内核</td>
-</tr>
-<tr>
-<td align="center">360、猎豹、2345浏览器</td>
-<td align="center">IE+Chrome双内核</td>
-</tr>
-<tr>
-<td align="center">搜狗、QQ浏览器</td>
-<td align="center">兼容模式下Trident+高速模式下Webkit</td>
-</tr>
-<tr>
-<td align="center">百度浏览器</td>
-<td align="center">Trident内核</td>
-</tr>
-</tbody></table>
+Myobject<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">writeln</span><span class="token punctuation">(</span>MyObject<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//执行结果为3</span></code></pre>
 
             </div>
             <hr/>
@@ -600,7 +527,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/">http://yoursite.com/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/</a>
+                    <a href="http://yoursite.com/2020/04/04/js-de-si-chong-diao-yong-fang-shi/">http://yoursite.com/2020/04/04/js-de-si-chong-diao-yong-fang-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -638,8 +565,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86/">
-                                    <span class="chip bg-color">浏览器原理</span>
+                                <a href="/tags/JS/">
+                                    <span class="chip bg-color">JS</span>
                                 </a>
                             
                         </div>
@@ -811,30 +738,83 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/03/28/vue-zhi-component/">
+                <a href="/2020/07/23/sql-shu-ju-jian-suo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Vue之component">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="SQL数据检索">
                         
-                        <span class="card-title">Vue之component</span>
+                        <span class="card-title">SQL数据检索</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一.简介组件是Vue.js最强大功能之一，可以扩展HTML元素，封装可重用的代码。
-注册组件语法如下
-Vue.component(组件名称，配置选项)
-调用组件，在HTML代码中和标签语法类似
-&lt;组件名>&lt;/组件名>
-Vue组件
+                            数据检索是数据库中最常用的功能，是从一个表或多个表中检索出想要的数据。SELECT语句可以说是SQL中最常用的语句了，本文主要基于MySQL讲解数据库的基础查询。
+本文使用表建表语句
+#student表
+/*
+ Navicat Premiu
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-28
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-23
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
+                                    数据分析
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                    <a href="/tags/SQL%E8%AF%AD%E5%8F%A5/">
+                        <span class="chip bg-color">SQL语句</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/29/vue-zhi-cli/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Vue之CLI">
+                        
+                        <span class="card-title">Vue之CLI</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一.前言无论学习使用任何框架、技术，阅读官方文档都是第一选择Vue.js官网。
+Vue.js的构建工具Vue-cli，加上Vue-router、Vuex、Vue-resource，就是注明的Vue.js全家桶系列，共同构成了一个完成的Vue
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -856,60 +836,6 @@ Vue组件
                     
                     <a href="/tags/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/">
                         <span class="chip bg-color">前端框架</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="浏览器的工作原理">
-                        
-                        <span class="card-title">浏览器的工作原理</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            本文只是个人学习心得总结，更详细的讲解可点击链接查看：新式浏览器的幕后揭秘
-一.浏览器历史
-1991年，第一代网络浏览器WorldWideWeb
-1993年，Mosaic，支持同时显示文本和图片
-1994年，网景浏览器（Netscape N
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86/">
-                        <span class="chip bg-color">浏览器原理</span>
                     </a>
                     
                 </div>

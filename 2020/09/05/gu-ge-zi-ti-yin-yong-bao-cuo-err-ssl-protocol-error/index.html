@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="浏览器的工作原理, coding">
+    <meta name="keywords" content="谷歌字体引用报错err_ssl_protocol_error, coding">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>浏览器的工作原理 | coding</title>
+    <title>谷歌字体引用报错err_ssl_protocol_error | coding</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">浏览器的工作原理</h1>
+                    <h1 class="description center-align post-title">谷歌字体引用报错err_ssl_protocol_error</h1>
                 </div>
             </div>
         </div>
@@ -430,8 +430,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86/">
-                                <span class="chip bg-color">浏览器原理</span>
+                            <a href="/tags/error/">
+                                <span class="chip bg-color">error</span>
                             </a>
                         
                     </div>
@@ -455,7 +455,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-02-29
+                    2020-09-05
                 </div>
                 
 
@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.3k
+                    414
                 </div>
                 
 
@@ -481,100 +481,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文只是个人学习心得总结，更详细的讲解可点击链接查看：<a target="_blank" rel="noopener" href="https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/">新式浏览器的幕后揭秘</a></p>
-<h1 id="一-浏览器历史"><a href="#一-浏览器历史" class="headerlink" title="一.浏览器历史"></a>一.浏览器历史</h1><ul>
-<li>1991年，第一代网络浏览器WorldWideWeb</li>
-<li>1993年，Mosaic，支持同时显示文本和图片</li>
-<li>1994年，网景浏览器（Netscape Navigator），第一款商用浏览器，支持静态HTML，同年浏览器opera发布</li>
-<li>1995年，微软发布IE浏览器，开始与网景的浏览器竞争，打响第一次浏览器大战</li>
-<li>1996年，发布IE3.0，同时绑定Windows操作系统，网景占据主要市场</li>
-<li>1998年，网景公司成立Mozilla基金会，并准备开发全新浏览器（Firefox）</li>
-<li>1999年，由于IE浏览器的天生优势，市场份额不断提高至99%，第一次浏览器大战以微软胜利结束</li>
-<li>2003年，苹果发布Safari浏览器</li>
-<li>2004年，Mozilla发布火狐（Firefox）浏览器，搭配全新内核Gecko，支持用户拓展，市场份额稳步上升</li>
-<li>2005年，苹果公司开源Safari浏览器内核webkit</li>
-<li>2008年，谷歌（Chromium）浏览器发布，基于webkit内核</li>
-<li>2010年，苹果发布Webkit2，改为多进程的结构模型</li>
-<li>2013年，Google宣布全新内核项目——Blink</li>
-<li>2015年，微软发布全新Edge浏览器，IE浏览器逐步退出舞台</li>
-<li>2017年，Mozilla退出Quantum版本的Firefox浏览器</li>
-<li>2019年，微软发布全新的Edge，支持插件使用，较上一代Edge浏览器有了较大提升</li>
-</ul>
-<h1 id="二-浏览器的组成"><a href="#二-浏览器的组成" class="headerlink" title="二.浏览器的组成"></a>二.浏览器的组成</h1><p>简单来说，浏览器是由用户界面+渲染引擎+浏览器引擎构成，其中渲染引擎又作为浏览器的核心。如图：</p>
-<img src="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9E%84%E6%88%90.png" alt="浏览器结构图" style="zoom:50%;">
+                <h1 id="一-谷歌字体库字体的使用"><a href="#一-谷歌字体库字体的使用" class="headerlink" title="一.谷歌字体库字体的使用"></a>一.谷歌字体库字体的使用</h1><p>在学习过程中，在一个HTML中引入了谷歌字体，通过如下方式引入：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/css?family<span class="token punctuation">=</span>Lobster<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+<p>在CSS中调用后，发现浏览器报错：</p>
+<img src="/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/%E6%8A%A5%E9%94%99%E4%BB%A3%E7%A0%81.png" alt="报错信息" style="zoom:50%;">
 
-<p><strong>用户界面（User Interface）</strong></p>
-<p>工具栏、菜单栏、交互按钮等。</p>
-<p><strong>浏览器引擎（Browser Engine）</strong></p>
-<p>浏览器引擎是一个可嵌入组件，为渲染引擎提供高级接口；可以加载一个给定的URL，支持浏览器的诸多操作。</p>
-<p><strong>渲染引擎（Rendering Engine）</strong></p>
-<p>也就是俗称的内核，是浏览器的核心，内部包含HTML解析器，可以准确计算页面布局，显示HTML和XML文档，可以选择CSS样式，以及嵌入式内容。</p>
-<p><strong>网络（Networking）</strong></p>
-<p>实现HTTP和FTP等文件传输协议。</p>
-<p><strong>JavaScript解释器（JavaScript Interpreter）</strong></p>
-<p>解释并执行嵌入网页的JS代码（ECMAScript），并通过DOM接口和CSSOM接口来修改网页内容、样式规则，从而改变渲染结果。</p>
-<p><strong>XML解析器（XML Parser）</strong></p>
-<p>XML解析器可以将XML文档解析成文档对象模型（DOM）树。</p>
-<p><strong>显示后端（Display Backend）</strong></p>
-<p>提供绘图和窗口原语，包括用户界面控件集合、字体集合。</p>
-<p><strong>数据持久层（Data Persistence）</strong></p>
-<p>存储书签、工具栏设置、Cookie、安全证书等数据在硬盘上。</p>
-<h1 id="三-工作原理"><a href="#三-工作原理" class="headerlink" title="三.工作原理"></a>三.工作原理</h1><p>浏览器工作流程图（Chrome浏览器为例）</p>
-<p><img src="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="浏览器工作流程图"></p>
-<p>1.当你在浏览器地址栏输入内容时，浏览器进程中的UI线程会根据你输入的内容，判断你输入的内容是网址还是关键词，如果输入网址，则会启动网络线程进行网址访问相关操作，如果是一串关键词，则通过浏览器设置好的默认搜索引擎进行搜索。</p>
-<p>2.浏览器进程中的网络线程请求获取到HTML数据后，通过IPC将数据传给渲染器进程的主线程，主线程将HTML解析构造DOM树；</p>
-<p>3.进行样式计算；</p>
-<p>4.根据DOM树和生成好的样式生成layout Tree，通过遍历Layout Tree生成绘制顺序表，然后遍历Layout Tree生成Layer Tree；</p>
-<p>5.将Layer Tree和绘制顺序信息一起传给合成器线程；</p>
-<p>6.合成器线程生成图块并传给栅格线程进行栅格化；</p>
-<p>7.栅格化完成后，合成器线程会获得栅格化线程传来的“draw quads”图块信息，根据这些信息，合成器线程合成一个合成器帧；</p>
-<p>8.通过IPC将生成的合成器帧传递给给浏览器进程，浏览器再传到GPU进行渲染，最后展示在屏幕上。</p>
-<h1 id="四-附录"><a href="#四-附录" class="headerlink" title="四.附录"></a>四.附录</h1><h4 id="1-进程与线程"><a href="#1-进程与线程" class="headerlink" title="1.进程与线程"></a>1.进程与线程</h4><ul>
-<li><strong>进程</strong>是操作系统进行资源分配和调度的基本单元，可以申请和拥有计算机资源，进程是程序的基本执行实体。<strong>线程</strong>是操作系统能够运算调度的最小单位，一个进程中可以并发多个线程，每条线程并行执行不同的任务。</li>
-</ul>
-<img src="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/emm.jpg" alt="听不懂.jpg" style="zoom:75%;">
+<p>经过验证发现<code>fonts.googleapis.com</code>服务已经挂掉，经过一番测试，发现正确的引入方式</p>
+<p>1.访问<a target="_blank" rel="noopener" href="http://www.googlefonts.net/">Google Fonts中国</a></p>
+<p>2.找到自己所需的字体，加入字体库，在<strong>嵌入</strong>菜单中复制引入代码</p>
+<img src="/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/%E5%BC%95%E5%85%A5%E4%BB%A3%E7%A0%81.png" alt="引入代码" style="zoom:50%;">
 
-<p>个人推荐看阮一峰大佬的博客：<a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html">进程与线程的解释</a></p>
-<h4 id="2-当前常见浏览器及其内核版本"><a href="#2-当前常见浏览器及其内核版本" class="headerlink" title="2.当前常见浏览器及其内核版本"></a>2.当前常见浏览器及其内核版本</h4><table>
-<thead>
-<tr>
-<th align="center">浏览器名称</th>
-<th align="center">内核版本</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">IE浏览器</td>
-<td align="center">Trident内核（IE内核）</td>
-</tr>
-<tr>
-<td align="center">Chrome浏览器</td>
-<td align="center">Blink内核</td>
-</tr>
-<tr>
-<td align="center">Firefox浏览器</td>
-<td align="center">Gecko内核（Firefox内核）</td>
-</tr>
-<tr>
-<td align="center">Safari浏览器</td>
-<td align="center">Webkit内核</td>
-</tr>
-<tr>
-<td align="center">Opera浏览器</td>
-<td align="center">Blink内核</td>
-</tr>
-<tr>
-<td align="center">360、猎豹、2345浏览器</td>
-<td align="center">IE+Chrome双内核</td>
-</tr>
-<tr>
-<td align="center">搜狗、QQ浏览器</td>
-<td align="center">兼容模式下Trident+高速模式下Webkit</td>
-</tr>
-<tr>
-<td align="center">百度浏览器</td>
-<td align="center">Trident内核</td>
-</tr>
-</tbody></table>
+<p>3.按照CSS样式制定规则，使用即可。</p>
+<h1 id="二-存在问题"><a href="#二-存在问题" class="headerlink" title="二.存在问题"></a>二.存在问题</h1><p>在引入成功后，发现有时网页打开速度较慢，经过对页面加载项分析，发现字体引用占用了大量的时间。为保障页面加载速度，可以将字体库字体本地化。网上也提出可以把链接指向360的公共库，但是本人测试并不可行，有兴趣可以自行尝试。</p>
+<h4 id="本地化教程"><a href="#本地化教程" class="headerlink" title="本地化教程"></a>本地化教程</h4><h5 id="1-复制link标签中指向的链接，在浏览器打开，此时看到的就是一个css文件的内容，如图所示："><a href="#1-复制link标签中指向的链接，在浏览器打开，此时看到的就是一个css文件的内容，如图所示：" class="headerlink" title="1.复制link标签中指向的链接，在浏览器打开，此时看到的就是一个css文件的内容，如图所示："></a>1.复制<code>link</code>标签中指向的链接，在浏览器打开，此时看到的就是一个css文件的内容，如图所示：</h5><img src="/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/%E9%83%A8%E5%88%86%E4%BB%A3%E7%A0%81%E6%88%AA%E5%9B%BE.png" alt="部分代码" style="zoom:50%;">
+
+<h5 id="2-在项目的CSS文件夹内新建一个css文件，将代码复制保存，在HTML文件中引用该css文件。"><a href="#2-在项目的CSS文件夹内新建一个css文件，将代码复制保存，在HTML文件中引用该css文件。" class="headerlink" title="2.在项目的CSS文件夹内新建一个css文件，将代码复制保存，在HTML文件中引用该css文件。"></a>2.在项目的CSS文件夹内新建一个css文件，将代码复制保存，在HTML文件中引用该css文件。</h5><h5 id="3-复制代码中url项，在浏览器中代开，按照提示操作下载字体文件，并将下载的字体文件保存在项目文件夹中。"><a href="#3-复制代码中url项，在浏览器中代开，按照提示操作下载字体文件，并将下载的字体文件保存在项目文件夹中。" class="headerlink" title="3.复制代码中url项，在浏览器中代开，按照提示操作下载字体文件，并将下载的字体文件保存在项目文件夹中。"></a>3.复制代码中<strong>url</strong>项，在浏览器中代开，按照提示操作下载字体文件，并将下载的字体文件保存在项目文件夹中。</h5><img src="/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/url%E5%9C%B0%E5%9D%80.png" alt="url地址" style="zoom:50%;">
+
+<h5 id="4-替换CSS文件中的url内容，将其更换为绝对路径引入。"><a href="#4-替换CSS文件中的url内容，将其更换为绝对路径引入。" class="headerlink" title="4.替换CSS文件中的url内容，将其更换为绝对路径引入。"></a>4.替换CSS文件中的<strong>url</strong>内容，将其更换为绝对路径引入。</h5><p>通过上面的方法，可以从本地访问谷歌字体库，页面加载效率将大大提升。</p>
 
             </div>
             <hr/>
@@ -600,7 +523,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/">http://yoursite.com/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/</a>
+                    <a href="http://yoursite.com/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/">http://yoursite.com/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -638,8 +561,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86/">
-                                    <span class="chip bg-color">浏览器原理</span>
+                                <a href="/tags/error/">
+                                    <span class="chip bg-color">error</span>
                                 </a>
                             
                         </div>
@@ -807,90 +730,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/03/28/vue-zhi-component/">
+                <a href="/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Vue之component">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="谷歌字体引用报错err_ssl_protocol_error">
                         
-                        <span class="card-title">Vue之component</span>
+                        <span class="card-title">谷歌字体引用报错err_ssl_protocol_error</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一.简介组件是Vue.js最强大功能之一，可以扩展HTML元素，封装可重用的代码。
-注册组件语法如下
-Vue.component(组件名称，配置选项)
-调用组件，在HTML代码中和标签语法类似
-&lt;组件名>&lt;/组件名>
-Vue组件
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-28
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Vue%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">Vue基础</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/">
-                        <span class="chip bg-color">前端框架</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/02/29/liu-lan-qi-de-gong-zuo-yuan-li/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="浏览器的工作原理">
-                        
-                        <span class="card-title">浏览器的工作原理</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            本文只是个人学习心得总结，更详细的讲解可点击链接查看：新式浏览器的幕后揭秘
-一.浏览器历史
-1991年，第一代网络浏览器WorldWideWeb
-1993年，Mosaic，支持同时显示文本和图片
-1994年，网景浏览器（Netscape N
+                            一.谷歌字体库字体的使用在学习过程中，在一个HTML中引入了谷歌字体，通过如下方式引入：
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lob
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-05
                             </span>
                         <span class="publish-author">
                             
@@ -908,8 +771,65 @@ Vue组件
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86/">
-                        <span class="chip bg-color">浏览器原理</span>
+                    <a href="/tags/error/">
+                        <span class="chip bg-color">error</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/09/02/qian-duan-tui-jian-zi-liao/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="前端推荐资料">
+                        
+                        <span class="card-title">前端推荐资料</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            持续更新。。。
+学习网站jQuery API中文文档
+Three.js技术博客
+codepen前端特效网站
+Vue官方网站
+思否segmentfault问答社区
+CSS Diner选择器练习
+素材网站色彩网站LOLCOLORS前端颜色选取
+
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%E8%B5%84%E6%96%99/">
+                        <span class="chip bg-color">前端资料</span>
                     </a>
                     
                 </div>
