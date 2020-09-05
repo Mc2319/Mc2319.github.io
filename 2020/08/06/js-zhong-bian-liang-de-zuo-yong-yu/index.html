@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.0.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.1.1"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
 <body>
@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    334
+                    322
                 </div>
                 
 
@@ -485,14 +485,14 @@
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> num1 <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>
 <span class="token keyword">var</span> num2 <span class="token operator">=</span> <span class="token number">60</span><span class="token punctuation">;</span>
 
-<span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span>num1<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span>num1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     num <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
     num1 <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
     num2 <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num2<span class="token punctuation">)</span><span class="token punctuation">;</span>
     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
 <span class="token function">f1</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span>num2<span class="token punctuation">)</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -515,16 +515,16 @@ num2 <span class="token operator">=</span> <span class="token number">100</span>
 100
 num is not defined</code></pre>
 <h1 id="2值类型和引用类型的传递"><a href="#2值类型和引用类型的传递" class="headerlink" title="2值类型和引用类型的传递"></a>2值类型和引用类型的传递</h1><p>如下代码输出结果</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>salary<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>salary<span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name <span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age <span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>salary <span class="token operator">=</span> salary <span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     person<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"cc"</span><span class="token punctuation">;</span>
     person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">"aa"</span><span class="token punctuation">,</span><span class="token string">"19"</span><span class="token punctuation">,</span><span class="token string">"10"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
 <span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">"bb"</span><span class="token punctuation">,</span><span class="token string">"20"</span><span class="token punctuation">,</span><span class="token string">"11"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1072,7 +1072,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14k</span>&nbsp;字
+                class="white-color">13.8k</span>&nbsp;字
             
             
             
