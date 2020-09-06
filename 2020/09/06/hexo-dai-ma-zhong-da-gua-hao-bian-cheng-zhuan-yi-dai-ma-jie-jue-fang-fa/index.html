@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="前端学习笔记, coding">
+    <meta name="keywords" content="hexo代码中大括号变成转义代码解决方法, coding">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>前端学习笔记 | coding</title>
+    <title>hexo代码中大括号变成转义代码解决方法 | coding</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">前端学习笔记</h1>
+                    <h1 class="description center-align post-title">hexo代码中大括号变成转义代码解决方法</h1>
                 </div>
             </div>
         </div>
@@ -430,8 +430,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/tags/hexo%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+                                <span class="chip bg-color">hexo解决方案</span>
                             </a>
                         
                     </div>
@@ -442,8 +442,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
+                            <a href="/categories/hexo/" class="post-category">
+                                hexo
                             </a>
                         
                     </div>
@@ -455,7 +455,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-08-27
+                    2020-09-06
                 </div>
                 
 
@@ -464,7 +464,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    101
+                    274
                 </div>
                 
 
@@ -481,10 +481,26 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、HTML"><a href="#一、HTML" class="headerlink" title="一、HTML"></a>一、HTML</h1><h2 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h2><ul>
-<li>HTML（全称HyperText Mark-up Language），是一种标识性语言，非编程语言，不能使用逻辑运算。是通过标签将网络上的文档进行统一，使分散的网络资源链接成为一个逻辑整体。</li>
-<li>超文本：是一种组织信息的方式，通过超级链接将图片、视频、文字等多种媒介关联起来。</li>
-</ul>
+                <p>在使用hexo搭建博客后，本地代码上传至服务器，在浏览器访问时，发现代码中<code>{}</code>变成了转义符号<code>&amp;#123 &amp;#125</code>，如图：</p>
+<img src="/2020/09/06/hexo-dai-ma-zhong-da-gua-hao-bian-cheng-zhuan-yi-dai-ma-jie-jue-fang-fa/%E6%9C%AC%E5%9C%B0%E6%88%AA%E5%9B%BE.png" alt="本地Typora截图" style="zoom:50%;">
+
+<img src="/2020/09/06/hexo-dai-ma-zhong-da-gua-hao-bian-cheng-zhuan-yi-dai-ma-jie-jue-fang-fa/%E9%94%99%E8%AF%AF%E6%88%AA%E5%9B%BE.png" alt="浏览器访问截图" style="zoom:50%;">
+
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>经过验证，在hexo更新至高版本（5.0.0及以上），就会出现该问题，与主题无关，需要上游解决。目前采用方案为降低hexo版本，即可解决该问题。</p>
+<p>问题讨论链接：<a href="https://github.com/blinkfox/hexo-theme-matery/issues/503" target="_blank" rel="noopener">hexo</a></p>
+<p>更换版本操作：</p>
+<pre class=" language-sh"><code class="language-sh">npm i hexo@4.1.1
+
+#建议网速慢的同学通过淘宝镜像cnpm操作
+cnpm i hexo@4.1.1</code></pre>
+<p>降低hexo版本后问题解决，如图：</p>
+<img src="/2020/09/06/hexo-dai-ma-zhong-da-gua-hao-bian-cheng-zhuan-yi-dai-ma-jie-jue-fang-fa/%E6%AD%A3%E7%A1%AE%E7%BB%93%E6%9E%9C.png" alt="浏览器截图" style="zoom:50%;">
+
+<p><strong>注</strong>：cnpm安装及hexo更新参照点击<a href="https://xmuli.tech/posts/cb1e6c4f/" target="_blank" rel="noopener">链接</a></p>
+<h1 id="意外收获"><a href="#意外收获" class="headerlink" title="意外收获"></a>意外收获</h1><p>在之前hexo博客使用过程中，使用<code>hexo clean</code>命令后，提示报错：</p>
+<pre class=" language-yml"><code class="language-yml">ERROR Plugin load failed: hexo-prism-plugin
+Error: `prism_plugin` options should be added to _config.yml file</code></pre>
+<p>但检查后发现<code>hexo-prism-plugin</code>插件文件及<code>_config.yml</code>配置文件均无问题，同时使用<code>hexo cl</code>命令时又无报错，该问题在降低hexo版本后也得到了解决，目前<code>hexo clean</code>使用无报错。</p>
 
             </div>
             <hr/>
@@ -510,7 +526,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/08/27/qian-duan-xue-xi-bi-ji/">http://yoursite.com/2020/08/27/qian-duan-xue-xi-bi-ji/</a>
+                    <a href="http://yoursite.com/2020/09/06/hexo-dai-ma-zhong-da-gua-hao-bian-cheng-zhuan-yi-dai-ma-jie-jue-fang-fa/">http://yoursite.com/2020/09/06/hexo-dai-ma-zhong-da-gua-hao-bian-cheng-zhuan-yi-dai-ma-jie-jue-fang-fa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,8 +564,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/tags/hexo%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+                                    <span class="chip bg-color">hexo解决方案</span>
                                 </a>
                             
                         </div>
@@ -717,37 +733,86 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/09/02/qian-duan-tui-jian-zi-liao/">
+                <a href="/2020/09/06/hexo-dai-ma-zhong-da-gua-hao-bian-cheng-zhuan-yi-dai-ma-jie-jue-fang-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="前端推荐资料">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="hexo代码中大括号变成转义代码解决方法">
                         
-                        <span class="card-title">前端推荐资料</span>
+                        <span class="card-title">hexo代码中大括号变成转义代码解决方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            持续更新。。。
-学习网站jQuery API中文文档
-Three.js技术博客
-codepen前端特效网站
-Vue官方网站
-思否segmentfault问答社区
-CSS Diner选择器练习
-素材网站色彩网站LOLCOLORS前端颜色选取
+                            在使用hexo搭建博客后，本地代码上传至服务器，在浏览器访问时，发现代码中{}变成了转义符号&amp;#123 &amp;#125，如图：
 
+
+
+
+解决方案经过验证，在hexo更新至高版本（5.0.0及以上），就会出现该问题，与主题无关，需
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-02
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+                        <span class="chip bg-color">hexo解决方案</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="谷歌字体引用报错err_ssl_protocol_error">
+                        
+                        <span class="card-title">谷歌字体引用报错err_ssl_protocol_error</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一.谷歌字体库字体的使用在学习过程中，在一个HTML中引入了谷歌字体，通过如下方式引入：
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lob
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -763,62 +828,8 @@ CSS Diner选择器练习
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF%E8%B5%84%E6%96%99/">
-                        <span class="chip bg-color">前端资料</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/08/24/mysql-shu-ju-ku-zhong-de-sql-shi-ru-he-zhi-xing-de/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="MySQL数据库中的SQL是如何执行的">
-                        
-                        <span class="card-title">MySQL数据库中的SQL是如何执行的</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            MySQL是一种C/S架构的数据库，即Client/Server架构，服务端程序使用的mysqld，MySQL流程图如下：
-
-mysqld主要由三层组成：
-
-连接层：户端与服务端建立连接，客户端发送SQL至服务端；
-SQL层：对SQL语句进
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-24
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
-                                    数据分析
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="/tags/error/">
+                        <span class="chip bg-color">error</span>
                     </a>
                     
                 </div>

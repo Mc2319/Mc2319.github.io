@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>hexo代码中大括号变成转义代码解决方法</title>
+      <link href="/2020/09/06/hexo-dai-ma-zhong-da-gua-hao-bian-cheng-zhuan-yi-dai-ma-jie-jue-fang-fa/"/>
+      <url>/2020/09/06/hexo-dai-ma-zhong-da-gua-hao-bian-cheng-zhuan-yi-dai-ma-jie-jue-fang-fa/</url>
+      
+        <content type="html"><![CDATA[<p>在使用hexo搭建博客后，本地代码上传至服务器，在浏览器访问时，发现代码中<code>{}</code>变成了转义符号<code>&amp;#123 &amp;#125</code>，如图：</p><img src="/2020/09/06/hexo-dai-ma-zhong-da-gua-hao-bian-cheng-zhuan-yi-dai-ma-jie-jue-fang-fa/%E6%9C%AC%E5%9C%B0%E6%88%AA%E5%9B%BE.png" alt="本地Typora截图" style="zoom:50%;"><img src="/2020/09/06/hexo-dai-ma-zhong-da-gua-hao-bian-cheng-zhuan-yi-dai-ma-jie-jue-fang-fa/%E9%94%99%E8%AF%AF%E6%88%AA%E5%9B%BE.png" alt="浏览器访问截图" style="zoom:50%;"><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>经过验证，在hexo更新至高版本（5.0.0及以上），就会出现该问题，与主题无关，需要上游解决。目前采用方案为降低hexo版本，即可解决该问题。</p><p>问题讨论链接：<a href="https://github.com/blinkfox/hexo-theme-matery/issues/503" target="_blank" rel="noopener">hexo</a></p><p>更换版本操作：</p><pre class=" language-sh"><code class="language-sh">npm i hexo@4.1.1#建议网速慢的同学通过淘宝镜像cnpm操作cnpm i hexo@4.1.1</code></pre><p>降低hexo版本后问题解决，如图：</p><img src="/2020/09/06/hexo-dai-ma-zhong-da-gua-hao-bian-cheng-zhuan-yi-dai-ma-jie-jue-fang-fa/%E6%AD%A3%E7%A1%AE%E7%BB%93%E6%9E%9C.png" alt="浏览器截图" style="zoom:50%;"><p><strong>注</strong>：cnpm安装及hexo更新参照点击<a href="https://xmuli.tech/posts/cb1e6c4f/" target="_blank" rel="noopener">链接</a></p><h1 id="意外收获"><a href="#意外收获" class="headerlink" title="意外收获"></a>意外收获</h1><p>在之前hexo博客使用过程中，使用<code>hexo clean</code>命令后，提示报错：</p><pre class=" language-yml"><code class="language-yml">ERROR Plugin load failed: hexo-prism-pluginError: `prism_plugin` options should be added to _config.yml file</code></pre><p>但检查后发现<code>hexo-prism-plugin</code>插件文件及<code>_config.yml</code>配置文件均无问题，同时使用<code>hexo cl</code>命令时又无报错，该问题在降低hexo版本后也得到了解决，目前<code>hexo clean</code>使用无报错。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo解决方案 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>谷歌字体引用报错err_ssl_protocol_error</title>
       <link href="/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/"/>
       <url>/2020/09/05/gu-ge-zi-ti-yin-yong-bao-cuo-err-ssl-protocol-error/</url>
